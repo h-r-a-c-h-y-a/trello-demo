@@ -1,11 +1,16 @@
 package am.gitc.trello.demo.entity;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
 
 @Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
 @Entity
 @Table(name = "roles")
 public class RoleEnitiy {

@@ -3,24 +3,25 @@ package am.gitc.trello.demo.dto;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Created by User on 20.07.2019.
  */
+
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode
-@Entity
-@Table(name = "task_bar")
 public class TaskBarDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "title")
+    @NotNull
+    @NotBlank
+    @Size(max = 60)
     private String title;
 
 }
