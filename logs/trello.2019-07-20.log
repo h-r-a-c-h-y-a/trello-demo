@@ -1,796 +1,265 @@
-2019-07-20 15:13:43.923 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on DESKTOP-5BEUF0B with PID 6396 (C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo\target\classes started by User in C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo)
-2019-07-20 15:13:43.938 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
-2019-07-20 15:13:46.753 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-20 15:13:46.862 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93ms. Found 1 repository interfaces.
-2019-07-20 15:13:47.612 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7f53abf3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-20 15:13:48.269 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-07-20 15:13:48.300 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-07-20 15:13:48.315 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2019-07-20 15:13:48.315 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-20 15:13:48.659 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-07-20 15:13:48.659 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4174 ms
-2019-07-20 15:13:48.940 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-07-20 15:13:50.050 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-07-20 15:13:50.143 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+2019-07-20 14:42:34.733 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 4504 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-20 14:42:34.744 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-20 14:42:38.418 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-20 14:42:38.610 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 170ms. Found 1 repository interfaces.
+2019-07-20 14:42:40.082 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4e928389] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-20 14:42:41.142 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-20 14:42:41.178 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-20 14:42:41.200 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-20 14:42:41.201 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-20 14:42:41.766 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-20 14:42:41.767 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6889 ms
+2019-07-20 14:42:42.384 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-20 14:42:43.914 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-20 14:42:44.307 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-20 15:13:50.300 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
-2019-07-20 15:13:50.300 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-2019-07-20 15:13:50.503 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-07-20 15:13:50.831 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-07-20 15:13:51.878 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-20 15:13:52.909 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-20 15:13:53.253 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-07-20 15:13:53.549 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-20 15:13:53.674 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2019-07-20 15:13:53.909 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
-2019-07-20 15:13:53.940 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-07-20 15:13:53.987 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
-2019-07-20 15:13:54.253 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-07-20 15:13:54.284 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-07-20 15:13:54.299 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 11.174 seconds (JVM running for 12.842)
-2019-07-20 15:14:06.217 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-20 15:14:06.217 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-07-20 15:14:06.237 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 20 ms
-2019-07-20 15:14:06.397 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246333,"response_time_after":1563621246349,"response_time":1563621246349,"response_duration":16,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":16}
-2019-07-20 15:14:06.397 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246333,"response_time_after":1563621246353,"response_time":1563621246353,"response_duration":20,"request_uri":"/webjars/springfox-swagger-ui/lib/object-assign-pollyfill.js","response_time_after_duration":20}
-2019-07-20 15:14:06.665 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246333,"response_time_after":1563621246665,"response_time":1563621246665,"response_duration":332,"request_uri":"/webjars/springfox-swagger-ui/lib/marked.js","response_time_after_duration":332}
-2019-07-20 15:14:06.793 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246333,"response_time_after":1563621246789,"response_time":1563621246789,"response_duration":456,"request_uri":"/webjars/springfox-swagger-ui/css/reset.css","response_time_after_duration":456}
-2019-07-20 15:14:06.793 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246333,"response_time_after":1563621246793,"response_time":1563621246793,"response_duration":460,"request_uri":"/webjars/springfox-swagger-ui/css/screen.css","response_time_after_duration":460}
-2019-07-20 15:14:06.801 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246409,"response_time_after":1563621246801,"response_time":1563621246801,"response_duration":392,"request_uri":"/webjars/springfox-swagger-ui/lib/swagger-oauth.js","response_time_after_duration":392}
-2019-07-20 15:14:06.809 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246673,"response_time_after":1563621246809,"response_time":1563621246809,"response_duration":136,"request_uri":"/webjars/springfox-swagger-ui/springfox.js","response_time_after_duration":136}
-2019-07-20 15:14:06.817 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246333,"response_time_after":1563621246817,"response_time":1563621246817,"response_duration":484,"request_uri":"/webjars/springfox-swagger-ui/lib/jquery-1.8.0.min.js","response_time_after_duration":484}
-2019-07-20 15:14:06.845 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246413,"response_time_after":1563621246845,"response_time":1563621246845,"response_duration":432,"request_uri":"/error","response_time_after_duration":432}
-2019-07-20 15:14:06.865 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246861,"response_time_after":1563621246865,"response_time":1563621246865,"response_duration":4,"request_uri":"/webjars/springfox-swagger-ui/lib/jquery.slideto.min.js","response_time_after_duration":4}
-2019-07-20 15:14:06.865 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246865,"response_time_after":1563621246865,"response_time":1563621246865,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/lib/jquery.wiggle.min.js","response_time_after_duration":0}
-2019-07-20 15:14:06.877 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246877,"response_time_after":1563621246877,"response_time":1563621246877,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/lib/jquery.ba-bbq.min.js","response_time_after_duration":0}
-2019-07-20 15:14:06.881 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246881,"response_time_after":1563621246881,"response_time":1563621246881,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/lib/handlebars-4.0.5.js","response_time_after_duration":0}
-2019-07-20 15:14:06.893 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246893,"response_time_after":1563621246893,"response_time":1563621246893,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/lib/lodash.min.js","response_time_after_duration":0}
-2019-07-20 15:14:06.893 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246893,"response_time_after":1563621246893,"response_time":1563621246893,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/lib/backbone-min.js","response_time_after_duration":0}
-2019-07-20 15:14:06.901 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246897,"response_time_after":1563621246901,"response_time":1563621246901,"response_duration":4,"request_uri":"/webjars/springfox-swagger-ui/swagger-ui.min.js","response_time_after_duration":4}
-2019-07-20 15:14:06.905 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246901,"response_time_after":1563621246905,"response_time":1563621246905,"response_duration":4,"request_uri":"/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack.js","response_time_after_duration":4}
-2019-07-20 15:14:06.905 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246905,"response_time_after":1563621246905,"response_time":1563621246905,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/lib/highlight.9.1.0.pack_extended.js","response_time_after_duration":0}
-2019-07-20 15:14:06.913 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246913,"response_time_after":1563621246913,"response_time":1563621246913,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/lib/jsoneditor.min.js","response_time_after_duration":0}
-2019-07-20 15:14:07.033 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246969,"response_time_after":1563621247033,"response_time":1563621247033,"response_duration":64,"request_uri":"/webjars/springfox-swagger-ui/images/logo_small.png","response_time_after_duration":64}
-2019-07-20 15:14:07.041 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621246997,"response_time_after":1563621247041,"response_time":1563621247041,"response_duration":44,"request_uri":"/webjars/springfox-swagger-ui/css/print.css","response_time_after_duration":44}
-2019-07-20 15:14:08.462 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621248188,"response_time_after":1563621248462,"response_time":1563621248462,"response_duration":274,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":274}
-2019-07-20 15:14:08.502 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621248486,"response_time_after":1563621248502,"response_time":1563621248502,"response_duration":16,"request_uri":"/swagger-resources","response_time_after_duration":16}
-2019-07-20 15:14:09.041 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621249033,"response_time_after":1563621249041,"response_time":1563621249041,"response_duration":8,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":8}
-2019-07-20 15:15:18.719 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on DESKTOP-5BEUF0B with PID 7292 (C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo\target\classes started by User in C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo)
-2019-07-20 15:15:18.735 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
-2019-07-20 15:15:21.062 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-20 15:15:21.218 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 141ms. Found 1 repository interfaces.
-2019-07-20 15:15:22.012 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$90e3937e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-20 15:15:23.059 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-07-20 15:15:23.090 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-07-20 15:15:23.106 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2019-07-20 15:15:23.106 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-20 15:15:23.325 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-07-20 15:15:23.325 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4418 ms
-2019-07-20 15:15:23.559 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-07-20 15:15:24.324 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-07-20 15:15:24.403 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+2019-07-20 14:42:44.922 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-20 14:42:44.927 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-20 14:42:45.824 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-20 14:42:46.261 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-20 14:42:55.368 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-20 14:42:56.599 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-20 14:42:57.164 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-20 14:42:57.585 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-20 14:42:57.887 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-20 14:42:58.230 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-07-20 14:42:58.295 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-07-20 14:42:58.430 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-07-20 14:42:58.656 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-20 14:42:58.732 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-20 14:42:58.737 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 25.367 seconds (JVM running for 39.673)
+2019-07-20 14:43:20.015 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-20 14:43:20.015 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-20 14:43:20.403 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 387 ms
+2019-07-20 14:43:23.314 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619401019,"response_time_after":1563619401272,"response_time":1563619401255,"response_duration":236,"request_uri":"/","response_time_after_duration":253}
+2019-07-20 14:43:23.314 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619401681,"response_time_after":1563619401686,"response_time":1563619401682,"response_duration":1,"request_uri":"/","response_time_after_duration":5}
+2019-07-20 14:43:23.510 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619403508,"response_time_after":1563619403510,"response_time":1563619403510,"response_duration":2,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":2}
+2019-07-20 14:43:24.145 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619403527,"response_time_after":1563619404145,"response_time":1563619404144,"response_duration":617,"request_uri":"/error","response_time_after_duration":618}
+2019-07-20 14:43:29.263 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619408931,"response_time_after":1563619409262,"response_time":1563619409262,"response_duration":331,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":331}
+2019-07-20 14:43:29.325 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619409304,"response_time_after":1563619409325,"response_time":1563619409325,"response_duration":21,"request_uri":"/swagger-resources","response_time_after_duration":21}
+2019-07-20 14:43:30.098 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619410088,"response_time_after":1563619410098,"response_time":1563619410098,"response_duration":10,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":10}
+2019-07-20 14:46:08.333 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 3820 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-20 14:46:08.345 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-20 14:46:13.599 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-20 14:46:13.773 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 153ms. Found 1 repository interfaces.
+2019-07-20 14:46:14.799 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ccd9e621] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-20 14:46:15.440 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-20 14:46:15.473 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-20 14:46:15.494 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-20 14:46:15.494 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-20 14:46:15.801 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-20 14:46:15.801 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7195 ms
+2019-07-20 14:46:16.232 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-20 14:46:17.368 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-20 14:46:17.522 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-20 15:15:24.512 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
-2019-07-20 15:15:24.528 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-2019-07-20 15:15:24.746 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-07-20 15:15:24.949 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-07-20 15:15:25.918 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-20 15:15:26.621 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-20 15:15:26.824 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-07-20 15:15:27.027 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-20 15:15:27.152 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2019-07-20 15:15:27.355 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
-2019-07-20 15:15:27.387 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-07-20 15:15:27.434 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
-2019-07-20 15:15:27.684 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-07-20 15:15:27.715 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-07-20 15:15:27.730 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 9.839 seconds (JVM running for 11.14)
-2019-07-20 15:15:36.260 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-20 15:15:36.260 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-07-20 15:15:36.276 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
-2019-07-20 15:15:36.352 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621336308,"response_time_after":1563621336320,"response_time":1563621336320,"response_duration":12,"request_uri":"/swagger-ui.html","response_time_after_duration":12}
-2019-07-20 15:15:36.388 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621336384,"response_time_after":1563621336384,"response_time":1563621336384,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":0}
-2019-07-20 15:15:36.728 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621336408,"response_time_after":1563621336728,"response_time":1563621336724,"response_duration":316,"request_uri":"/error","response_time_after_duration":320}
-2019-07-20 15:15:36.892 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621336888,"response_time_after":1563621336892,"response_time":1563621336892,"response_duration":4,"request_uri":"/webjars/springfox-swagger-ui/images/favicon-32x32.png","response_time_after_duration":4}
-2019-07-20 15:15:36.912 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621336856,"response_time_after":1563621336912,"response_time":1563621336912,"response_duration":56,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":56}
-2019-07-20 15:15:36.936 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621336924,"response_time_after":1563621336936,"response_time":1563621336936,"response_duration":12,"request_uri":"/swagger-resources","response_time_after_duration":12}
-2019-07-20 15:15:37.240 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621337232,"response_time_after":1563621337240,"response_time":1563621337240,"response_duration":8,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":8}
-2019-07-20 15:15:40.944 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621340940,"response_time_after":1563621340944,"response_time":1563621340940,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/images/throbber.gif","response_time_after_duration":4}
-2019-07-20 15:15:57.282 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621357250,"response_time_after":1563621357282,"request_uri":"/home/createCard","response_time_after_duration":32}
-2019-07-20 15:15:57.290 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.IllegalStateException: An Errors/BindingResult argument is expected to be declared immediately after the model attribute, the @RequestBody or the @RequestPart arguments to which they apply: public org.springframework.web.servlet.ModelAndView am.gitc.trello.demo.controller.HomeController.createCard(java.lang.String,org.springframework.validation.BindingResult)] with root cause
-java.lang.IllegalStateException: An Errors/BindingResult argument is expected to be declared immediately after the model attribute, the @RequestBody or the @RequestPart arguments to which they apply: public org.springframework.web.servlet.ModelAndView am.gitc.trello.demo.controller.HomeController.createCard(java.lang.String,org.springframework.validation.BindingResult)
-	at org.springframework.web.method.annotation.ErrorsMethodArgumentResolver.resolveArgument(ErrorsMethodArgumentResolver.java:69)
-	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:126)
-	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:167)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:134)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-07-20 15:15:57.298 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621357294,"response_time_after":1563621357298,"response_time":1563621357298,"response_duration":4,"request_uri":"/error","response_time_after_duration":4}
-2019-07-20 15:21:18.025 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on DESKTOP-5BEUF0B with PID 5860 (C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo\target\classes started by User in C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo)
-2019-07-20 15:21:18.025 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
-2019-07-20 15:21:20.658 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-20 15:21:20.783 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 110ms. Found 1 repository interfaces.
-2019-07-20 15:21:21.314 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2ba1ef5b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-20 15:21:21.970 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-07-20 15:21:21.986 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-07-20 15:21:22.001 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2019-07-20 15:21:22.001 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-20 15:21:22.189 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-07-20 15:21:22.204 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4054 ms
-2019-07-20 15:21:22.439 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-07-20 15:21:23.204 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-07-20 15:21:23.267 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+2019-07-20 14:46:17.799 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-20 14:46:17.802 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-20 14:46:18.160 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-20 14:46:18.585 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-20 14:46:20.395 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-20 14:46:21.594 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-20 14:46:21.915 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-20 14:46:22.274 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-20 14:46:22.522 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-20 14:46:22.806 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-07-20 14:46:22.845 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-07-20 14:46:22.921 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-07-20 14:46:22.968 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-20 14:46:23.037 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-20 14:46:23.043 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 17.486 seconds (JVM running for 23.85)
+2019-07-20 14:46:30.933 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-20 14:46:30.934 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-20 14:46:30.955 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 20 ms
+2019-07-20 14:46:31.171 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619591011,"response_time_after":1563619591066,"response_time":1563619591047,"response_duration":36,"request_uri":"/","response_time_after_duration":55}
+2019-07-20 14:46:31.567 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619591563,"response_time_after":1563619591566,"response_time":1563619591566,"response_duration":3,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":3}
+2019-07-20 14:46:32.144 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619591585,"response_time_after":1563619592143,"response_time":1563619592143,"response_duration":558,"request_uri":"/error","response_time_after_duration":558}
+2019-07-20 14:46:32.459 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619592348,"response_time_after":1563619592459,"response_time":1563619592459,"response_duration":111,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":111}
+2019-07-20 14:46:32.504 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619592486,"response_time_after":1563619592504,"response_time":1563619592503,"response_duration":17,"request_uri":"/swagger-resources","response_time_after_duration":18}
+2019-07-20 14:46:32.653 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619592641,"response_time_after":1563619592653,"response_time":1563619592653,"response_duration":12,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":12}
+2019-07-20 14:46:51.023 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619611020,"response_time_after":1563619611023,"response_time":1563619611021,"response_duration":1,"request_uri":"/","response_time_after_duration":3}
+2019-07-20 14:46:51.690 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619611688,"response_time_after":1563619611690,"response_time":1563619611689,"response_duration":1,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":2}
+2019-07-20 14:46:51.703 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619611699,"response_time_after":1563619611703,"response_time":1563619611703,"response_duration":4,"request_uri":"/error","response_time_after_duration":4}
+2019-07-20 14:46:52.438 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619612433,"response_time_after":1563619612438,"response_time":1563619612437,"response_duration":4,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":5}
+2019-07-20 14:46:52.503 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619612498,"response_time_after":1563619612503,"response_time":1563619612503,"response_duration":5,"request_uri":"/swagger-resources","response_time_after_duration":5}
+2019-07-20 14:46:52.641 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563619612629,"response_time_after":1563619612641,"response_time":1563619612635,"response_duration":6,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":12}
+2019-07-20 14:53:41.272 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 3584 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-20 14:53:41.289 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-20 14:53:45.373 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-20 14:53:45.639 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 236ms. Found 1 repository interfaces.
+2019-07-20 14:53:46.977 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$60530746] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-20 14:53:47.920 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-20 14:53:47.976 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-20 14:53:48.009 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-20 14:53:48.010 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-20 14:53:48.446 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-20 14:53:48.447 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6832 ms
+2019-07-20 14:53:49.042 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-20 14:53:50.612 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-20 14:53:50.801 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-20 15:21:23.407 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
-2019-07-20 15:21:23.407 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-2019-07-20 15:21:23.626 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-07-20 15:21:23.861 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-07-20 15:21:24.829 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-20 15:21:25.532 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-20 15:21:25.735 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-07-20 15:21:25.939 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-20 15:21:26.110 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2019-07-20 15:21:26.423 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
-2019-07-20 15:21:26.454 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-07-20 15:21:26.532 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
-2019-07-20 15:21:26.907 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-07-20 15:21:26.970 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-07-20 15:21:26.970 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 9.757 seconds (JVM running for 11.193)
-2019-07-20 15:21:36.337 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-20 15:21:36.337 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-07-20 15:21:36.357 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 20 ms
-2019-07-20 15:21:36.473 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621696409,"response_time_after":1563621696425,"response_time":1563621696425,"response_duration":16,"request_uri":"/swagger-ui.html","response_time_after_duration":16}
-2019-07-20 15:21:36.517 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621696513,"response_time_after":1563621696517,"response_time":1563621696513,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":4}
-2019-07-20 15:21:37.009 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621696541,"response_time_after":1563621697009,"response_time":1563621697009,"response_duration":468,"request_uri":"/error","response_time_after_duration":468}
-2019-07-20 15:21:37.161 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621697153,"response_time_after":1563621697161,"response_time":1563621697161,"response_duration":8,"request_uri":"/webjars/springfox-swagger-ui/images/favicon-32x32.png","response_time_after_duration":8}
-2019-07-20 15:21:37.197 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621697125,"response_time_after":1563621697197,"response_time":1563621697197,"response_duration":72,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":72}
-2019-07-20 15:21:37.233 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621697213,"response_time_after":1563621697233,"response_time":1563621697233,"response_duration":20,"request_uri":"/swagger-resources","response_time_after_duration":20}
-2019-07-20 15:21:37.628 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621697620,"response_time_after":1563621697628,"response_time":1563621697628,"response_duration":8,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":8}
-2019-07-20 15:24:27.235 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621866674,"response_time_after":1563621867235,"request_uri":"/home/createCard","response_time_after_duration":561}
-2019-07-20 15:24:27.255 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.validation.ConstraintViolationException: Validation failed for classes [am.gitc.trello.demo.entity.CardEntity] during persist time for groups [javax.validation.groups.Default, ]
-List of constraint violations:[
-	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=title, rootBeanClass=class am.gitc.trello.demo.entity.CardEntity, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
-	ConstraintViolationImpl{interpolatedMessage='должно быть задано', propertyPath=title, rootBeanClass=class am.gitc.trello.demo.entity.CardEntity, messageTemplate='{javax.validation.constraints.NotNull.message}'}
-]] with root cause
-javax.validation.ConstraintViolationException: Validation failed for classes [am.gitc.trello.demo.entity.CardEntity] during persist time for groups [javax.validation.groups.Default, ]
-List of constraint violations:[
-	ConstraintViolationImpl{interpolatedMessage='не может быть пусто', propertyPath=title, rootBeanClass=class am.gitc.trello.demo.entity.CardEntity, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
-	ConstraintViolationImpl{interpolatedMessage='должно быть задано', propertyPath=title, rootBeanClass=class am.gitc.trello.demo.entity.CardEntity, messageTemplate='{javax.validation.constraints.NotNull.message}'}
-]
-	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
-	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
-	at org.hibernate.action.internal.EntityIdentityInsertAction.preInsert(EntityIdentityInsertAction.java:197)
-	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:75)
-	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
-	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
-	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
-	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
-	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:332)
-	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:289)
-	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:196)
-	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:127)
-	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:192)
-	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
-	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:62)
-	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:800)
-	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:785)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350)
-	at com.sun.proxy.$Proxy92.persist(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:308)
-	at com.sun.proxy.$Proxy92.persist(Unknown Source)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:507)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:138)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
-	at com.sun.proxy.$Proxy95.save(Unknown Source)
-	at am.gitc.trello.demo.service.CardService.createCard(CardService.java:24)
-	at am.gitc.trello.demo.controller.HomeController.createCard(HomeController.java:29)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-07-20 15:24:27.271 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621867263,"response_time_after":1563621867267,"response_time":1563621867267,"response_duration":4,"request_uri":"/error","response_time_after_duration":4}
-2019-07-20 15:25:03.930 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on DESKTOP-5BEUF0B with PID 4760 (C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo\target\classes started by User in C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo)
-2019-07-20 15:25:03.945 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
-2019-07-20 15:25:06.429 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-20 15:25:06.539 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94ms. Found 1 repository interfaces.
-2019-07-20 15:25:07.039 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$db7dfd6d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-20 15:25:07.742 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-07-20 15:25:07.757 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-07-20 15:25:07.789 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2019-07-20 15:25:07.789 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-20 15:25:08.023 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-07-20 15:25:08.023 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 3906 ms
-2019-07-20 15:25:08.242 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-07-20 15:25:09.101 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-07-20 15:25:09.179 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+2019-07-20 14:53:51.085 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-20 14:53:51.091 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-20 14:53:51.612 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-20 14:53:52.154 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-20 14:53:54.414 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-20 14:53:56.076 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-20 14:53:56.562 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-20 14:53:57.097 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-20 14:53:57.560 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-20 14:53:57.941 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-07-20 14:53:57.989 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.IllegalStateException: Multiple Dockets with the same group name are not supported. The following duplicate groups were discovered. default
+2019-07-20 14:53:57.992 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-20 14:53:57.996 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-20 14:53:58.004 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-20 14:53:58.025 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-20 14:53:58.030 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-20 14:53:58.078 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-20 14:53:58.109 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.context.ApplicationContextException: Failed to start bean 'documentationPluginsBootstrapper'; nested exception is java.lang.IllegalStateException: Multiple Dockets with the same group name are not supported. The following duplicate groups were discovered. default
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:185)
+	at org.springframework.context.support.DefaultLifecycleProcessor.access$200(DefaultLifecycleProcessor.java:53)
+	at org.springframework.context.support.DefaultLifecycleProcessor$LifecycleGroup.start(DefaultLifecycleProcessor.java:360)
+	at org.springframework.context.support.DefaultLifecycleProcessor.startBeans(DefaultLifecycleProcessor.java:158)
+	at org.springframework.context.support.DefaultLifecycleProcessor.onRefresh(DefaultLifecycleProcessor.java:122)
+	at org.springframework.context.support.AbstractApplicationContext.finishRefresh(AbstractApplicationContext.java:893)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.finishRefresh(ServletWebServerApplicationContext.java:161)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:552)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at am.gitc.trello.demo.TrelloDemoApplication.main(TrelloDemoApplication.java:10)
+Caused by: java.lang.IllegalStateException: Multiple Dockets with the same group name are not supported. The following duplicate groups were discovered. default
+	at springfox.documentation.spring.web.plugins.DuplicateGroupsDetector.ensureNoDuplicateGroups(DuplicateGroupsDetector.java:45)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsManager.documentationPlugins(DocumentationPluginsManager.java:97)
+	at springfox.documentation.spring.web.plugins.DocumentationPluginsBootstrapper.start(DocumentationPluginsBootstrapper.java:148)
+	at org.springframework.context.support.DefaultLifecycleProcessor.doStart(DefaultLifecycleProcessor.java:182)
+	... 14 common frames omitted
+2019-07-20 14:58:27.026 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 4660 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-20 14:58:27.035 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-20 14:58:31.370 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-20 14:58:31.555 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 162ms. Found 1 repository interfaces.
+2019-07-20 14:58:32.475 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4e928389] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-20 14:58:33.118 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-20 14:58:33.159 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-20 14:58:33.185 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-20 14:58:33.187 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-20 14:58:33.517 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-20 14:58:33.518 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6240 ms
+2019-07-20 14:58:33.965 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-20 14:58:35.089 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-20 14:58:35.206 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-20 15:25:09.288 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
-2019-07-20 15:25:09.304 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-2019-07-20 15:25:09.507 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-07-20 15:25:09.710 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-07-20 15:25:10.632 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-20 15:25:11.320 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-20 15:25:11.523 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-07-20 15:25:11.710 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-20 15:25:11.835 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2019-07-20 15:25:12.023 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
-2019-07-20 15:25:12.038 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-07-20 15:25:12.085 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
-2019-07-20 15:25:12.319 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-07-20 15:25:12.366 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-07-20 15:25:12.366 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 9.186 seconds (JVM running for 10.631)
-2019-07-20 15:25:51.453 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-20 15:25:51.453 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-07-20 15:25:51.465 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
-2019-07-20 15:25:51.545 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621951497,"response_time_after":1563621951509,"response_time":1563621951505,"response_duration":8,"request_uri":"/swagger-ui.html","response_time_after_duration":12}
-2019-07-20 15:25:51.581 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621951581,"response_time_after":1563621951581,"response_time":1563621951581,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":0}
-2019-07-20 15:25:51.909 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621951605,"response_time_after":1563621951909,"response_time":1563621951909,"response_duration":304,"request_uri":"/error","response_time_after_duration":304}
-2019-07-20 15:25:52.021 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621952009,"response_time_after":1563621952021,"response_time":1563621952021,"response_duration":12,"request_uri":"/webjars/springfox-swagger-ui/images/favicon-32x32.png","response_time_after_duration":12}
-2019-07-20 15:25:52.037 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621951985,"response_time_after":1563621952037,"response_time":1563621952037,"response_duration":52,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":52}
-2019-07-20 15:25:52.061 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621952049,"response_time_after":1563621952061,"response_time":1563621952061,"response_duration":12,"request_uri":"/swagger-resources","response_time_after_duration":12}
-2019-07-20 15:25:52.337 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621952329,"response_time_after":1563621952337,"response_time":1563621952337,"response_duration":8,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":8}
-2019-07-20 15:26:47.126 WARN  o.h.e.jdbc.spi.SqlExceptionHelper - SQL Error: 1146, SQLState: 42S02
-2019-07-20 15:26:47.126 ERROR o.h.e.jdbc.spi.SqlExceptionHelper - Table 'users_chat.cards' doesn't exist
-2019-07-20 15:26:47.214 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622006802,"response_time_after":1563622007210,"request_uri":"/home/createCard","response_time_after_duration":408}
-2019-07-20 15:26:47.230 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessResourceUsageException: could not execute statement; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not execute statement] with root cause
-java.sql.SQLSyntaxErrorException: Table 'users_chat.cards' doesn't exist
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120)
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:955)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1094)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1042)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1345)
-	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:1027)
-	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
-	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
-	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:175)
-	at org.hibernate.dialect.identity.GetGeneratedKeysDelegate.executeAndExtract(GetGeneratedKeysDelegate.java:57)
-	at org.hibernate.id.insert.AbstractReturningDelegate.performInsert(AbstractReturningDelegate.java:42)
-	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3077)
-	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:3667)
-	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
-	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:645)
-	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:282)
-	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:263)
-	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:317)
-	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:332)
-	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:289)
-	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:196)
-	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:127)
-	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:192)
-	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:135)
-	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:62)
-	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:800)
-	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:785)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:350)
-	at com.sun.proxy.$Proxy92.persist(Unknown Source)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:308)
-	at com.sun.proxy.$Proxy92.persist(Unknown Source)
-	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:507)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:359)
-	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:200)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:644)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.doInvoke(RepositoryFactorySupport.java:608)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.lambda$invoke$3(RepositoryFactorySupport.java:595)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.invoke(RepositoryFactorySupport.java:595)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:59)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:295)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:98)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:138)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:93)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.data.repository.core.support.SurroundingTransactionDetectorMethodInterceptor.invoke(SurroundingTransactionDetectorMethodInterceptor.java:61)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
-	at com.sun.proxy.$Proxy95.save(Unknown Source)
-	at am.gitc.trello.demo.service.CardService.createCard(CardService.java:24)
-	at am.gitc.trello.demo.controller.HomeController.createCard(HomeController.java:29)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-07-20 15:26:47.246 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622007242,"response_time_after":1563622007246,"response_time":1563622007246,"response_duration":4,"request_uri":"/error","response_time_after_duration":4}
-2019-07-20 15:33:22.897 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on DESKTOP-5BEUF0B with PID 7080 (C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo\target\classes started by User in C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo)
-2019-07-20 15:33:22.905 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
-2019-07-20 15:33:25.604 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-20 15:33:25.800 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 172ms. Found 1 repository interfaces.
-2019-07-20 15:33:26.556 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9d370ea3] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-20 15:33:27.324 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-07-20 15:33:27.352 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-07-20 15:33:27.372 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2019-07-20 15:33:27.372 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-20 15:33:27.620 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-07-20 15:33:27.620 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4539 ms
-2019-07-20 15:33:27.883 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-07-20 15:33:28.815 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-07-20 15:33:28.899 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+2019-07-20 14:58:35.480 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-20 14:58:35.487 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-20 14:58:35.954 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-20 14:58:36.390 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-20 14:58:38.084 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-20 14:58:39.149 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-20 14:58:39.491 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-20 14:58:39.818 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-20 14:58:40.078 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-20 14:58:40.359 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-07-20 14:58:40.398 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-07-20 14:58:40.489 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-07-20 14:58:40.884 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-20 14:58:40.938 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-20 14:58:40.944 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 15.94 seconds (JVM running for 19.123)
+2019-07-20 14:58:52.255 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-20 14:58:52.255 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-20 14:58:52.282 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 27 ms
+2019-07-20 14:58:52.852 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563620332760,"response_time_after":1563620332808,"response_time":1563620332792,"response_duration":32,"request_uri":"/","response_time_after_duration":48}
+2019-07-20 14:58:53.032 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563620333030,"response_time_after":1563620333031,"response_time":1563620333031,"response_duration":1,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":1}
+2019-07-20 14:58:53.150 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563620333048,"response_time_after":1563620333149,"response_time":1563620333149,"response_duration":101,"request_uri":"/error","response_time_after_duration":101}
+2019-07-20 14:58:53.891 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563620333801,"response_time_after":1563620333891,"response_time":1563620333891,"response_duration":90,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":90}
+2019-07-20 14:58:53.953 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563620333932,"response_time_after":1563620333953,"response_time":1563620333952,"response_duration":20,"request_uri":"/swagger-resources","response_time_after_duration":21}
+2019-07-20 14:58:54.975 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563620334957,"response_time_after":1563620334974,"response_time":1563620334974,"response_duration":17,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":17}
+2019-07-20 15:05:50.043 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 4780 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-20 15:05:50.055 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-20 15:05:52.403 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-20 15:05:52.587 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 164ms. Found 1 repository interfaces.
+2019-07-20 15:05:53.512 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$36204fa0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-20 15:05:54.256 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-20 15:05:54.290 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-20 15:05:54.311 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-20 15:05:54.311 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-20 15:05:54.655 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-20 15:05:54.656 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4479 ms
+2019-07-20 15:05:55.091 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-20 15:05:56.231 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-20 15:05:56.380 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-20 15:33:29.039 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
-2019-07-20 15:33:29.043 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-2019-07-20 15:33:29.259 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-07-20 15:33:29.495 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-07-20 15:33:30.983 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-20 15:33:32.114 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-20 15:33:32.430 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-07-20 15:33:32.858 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-20 15:33:33.094 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2019-07-20 15:33:33.563 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
-2019-07-20 15:33:33.599 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-07-20 15:33:33.670 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
-2019-07-20 15:33:33.997 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-07-20 15:33:34.036 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-07-20 15:33:34.036 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 11.927 seconds (JVM running for 13.563)
-2019-07-20 15:34:12.159 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-20 15:34:12.159 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-07-20 15:34:12.175 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
-2019-07-20 15:34:12.255 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622452211,"response_time_after":1563622452219,"response_time":1563622452219,"response_duration":8,"request_uri":"/swagger-ui.html","response_time_after_duration":8}
-2019-07-20 15:34:12.287 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622452283,"response_time_after":1563622452283,"response_time":1563622452283,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":0}
-2019-07-20 15:34:12.619 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622452307,"response_time_after":1563622452619,"response_time":1563622452619,"response_duration":312,"request_uri":"/error","response_time_after_duration":312}
-2019-07-20 15:34:12.727 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622452719,"response_time_after":1563622452727,"response_time":1563622452727,"response_duration":8,"request_uri":"/webjars/springfox-swagger-ui/images/favicon-32x32.png","response_time_after_duration":8}
-2019-07-20 15:34:12.751 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622452695,"response_time_after":1563622452751,"response_time":1563622452751,"response_duration":56,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":56}
-2019-07-20 15:34:12.775 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622452763,"response_time_after":1563622452775,"response_time":1563622452775,"response_duration":12,"request_uri":"/swagger-resources","response_time_after_duration":12}
-2019-07-20 15:34:13.051 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622453043,"response_time_after":1563622453051,"response_time":1563622453051,"response_duration":8,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":8}
-2019-07-20 15:34:23.762 ERROR org.thymeleaf.TemplateEngine - [THYMELEAF][http-nio-8080-exec-6] Exception processing template "home": Error resolving template [home], template might not exist or might not be accessible by any of the configured Template Resolvers
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [home], template might not exist or might not be accessible by any of the configured Template Resolvers
-	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1371)
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1117)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-07-20 15:34:23.766 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622462778,"response_time_after":1563622463766,"response_time":1563622463286,"response_duration":508,"request_uri":"/home/createCard","response_time_after_duration":988}
-2019-07-20 15:34:23.774 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [home], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [home], template might not exist or might not be accessible by any of the configured Template Resolvers
-	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1371)
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1117)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-07-20 15:34:23.790 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622463782,"response_time_after":1563622463790,"response_time":1563622463790,"response_duration":8,"request_uri":"/error","response_time_after_duration":8}
-2019-07-20 15:42:59.768 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on DESKTOP-5BEUF0B with PID 11492 (C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo\target\classes started by User in C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo)
-2019-07-20 15:42:59.780 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
-2019-07-20 15:43:02.464 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-07-20 15:43:02.592 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 112ms. Found 1 repository interfaces.
-2019-07-20 15:43:03.184 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$586dd790] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-07-20 15:43:03.819 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
-2019-07-20 15:43:03.855 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
-2019-07-20 15:43:03.871 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2019-07-20 15:43:03.871 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
-2019-07-20 15:43:04.075 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2019-07-20 15:43:04.075 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 4167 ms
-2019-07-20 15:43:04.323 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-2019-07-20 15:43:05.119 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-2019-07-20 15:43:05.195 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+2019-07-20 15:05:56.601 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-20 15:05:56.606 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-20 15:05:56.975 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-20 15:05:57.362 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-20 15:05:59.181 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-20 15:06:00.389 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-20 15:06:00.719 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-20 15:06:01.086 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-20 15:06:01.329 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-20 15:06:01.613 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-07-20 15:06:01.667 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-07-20 15:06:01.774 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-07-20 15:06:02.157 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-20 15:06:02.212 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-20 15:06:02.217 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 15.898 seconds (JVM running for 20.902)
+2019-07-20 15:06:09.383 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-20 15:06:09.384 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-20 15:06:09.404 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 20 ms
+2019-07-20 15:06:10.023 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563620769904,"response_time_after":1563620769967,"response_time":1563620769948,"response_duration":44,"request_uri":"/","response_time_after_duration":63}
+2019-07-20 15:06:10.111 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563620770108,"response_time_after":1563620770110,"response_time":1563620770110,"response_duration":2,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":2}
+2019-07-20 15:06:10.223 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563620770128,"response_time_after":1563620770223,"response_time":1563620770223,"response_duration":95,"request_uri":"/error","response_time_after_duration":95}
+2019-07-20 15:06:10.762 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563620770681,"response_time_after":1563620770762,"response_time":1563620770762,"response_duration":81,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":81}
+2019-07-20 15:06:10.820 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563620770799,"response_time_after":1563620770820,"response_time":1563620770820,"response_duration":21,"request_uri":"/swagger-resources","response_time_after_duration":21}
+2019-07-20 15:06:11.496 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563620771475,"response_time_after":1563620771496,"response_time":1563620771495,"response_duration":20,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":21}
+2019-07-20 15:08:44.801 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 4196 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-20 15:08:44.836 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-20 15:08:48.364 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-20 15:08:48.546 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 158ms. Found 1 repository interfaces.
+2019-07-20 15:08:49.473 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$60530746] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-20 15:08:50.197 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-20 15:08:50.231 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-20 15:08:50.253 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-20 15:08:50.254 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-20 15:08:50.585 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-20 15:08:50.585 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5526 ms
+2019-07-20 15:08:51.091 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-20 15:08:52.328 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-20 15:08:52.444 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2019-07-20 15:43:05.331 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
-2019-07-20 15:43:05.335 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
-2019-07-20 15:43:05.551 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
-2019-07-20 15:43:05.771 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
-2019-07-20 15:43:06.731 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-2019-07-20 15:43:07.419 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2019-07-20 15:43:07.619 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-07-20 15:43:07.815 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-07-20 15:43:07.927 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
-2019-07-20 15:43:08.127 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
-2019-07-20 15:43:08.151 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-07-20 15:43:08.195 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
-2019-07-20 15:43:08.427 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
-2019-07-20 15:43:08.463 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
-2019-07-20 15:43:08.467 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 9.41 seconds (JVM running for 10.765)
-2019-07-20 15:43:11.038 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2019-07-20 15:43:11.038 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-2019-07-20 15:43:11.058 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 20 ms
-2019-07-20 15:43:11.142 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622991090,"response_time_after":1563622991102,"response_time":1563622991102,"response_duration":12,"request_uri":"/swagger-ui.html","response_time_after_duration":12}
-2019-07-20 15:43:11.182 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622991178,"response_time_after":1563622991178,"response_time":1563622991178,"response_duration":0,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":0}
-2019-07-20 15:43:11.518 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622991198,"response_time_after":1563622991514,"response_time":1563622991514,"response_duration":316,"request_uri":"/error","response_time_after_duration":316}
-2019-07-20 15:43:11.726 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622991718,"response_time_after":1563622991726,"response_time":1563622991726,"response_duration":8,"request_uri":"/webjars/springfox-swagger-ui/images/favicon-32x32.png","response_time_after_duration":8}
-2019-07-20 15:43:11.750 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622991694,"response_time_after":1563622991750,"response_time":1563622991750,"response_duration":56,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":56}
-2019-07-20 15:43:11.770 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622991758,"response_time_after":1563622991770,"response_time":1563622991770,"response_duration":12,"request_uri":"/swagger-resources","response_time_after_duration":12}
-2019-07-20 15:43:12.040 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622992032,"response_time_after":1563622992040,"response_time":1563622992040,"response_duration":8,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":8}
-2019-07-20 15:43:19.882 ERROR org.thymeleaf.TemplateEngine - [THYMELEAF][http-nio-8080-exec-8] Exception processing template "home/createCard": Error resolving template [home/createCard], template might not exist or might not be accessible by any of the configured Template Resolvers
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [home/createCard], template might not exist or might not be accessible by any of the configured Template Resolvers
-	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1371)
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1117)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-07-20 15:43:19.886 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622999085,"response_time_after":1563622999886,"response_time":1563622999417,"response_duration":332,"request_uri":"/home/createCard","response_time_after_duration":801}
-2019-07-20 15:43:19.890 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.thymeleaf.exceptions.TemplateInputException: Error resolving template [home/createCard], template might not exist or might not be accessible by any of the configured Template Resolvers] with root cause
-org.thymeleaf.exceptions.TemplateInputException: Error resolving template [home/createCard], template might not exist or might not be accessible by any of the configured Template Resolvers
-	at org.thymeleaf.engine.TemplateManager.resolveTemplate(TemplateManager.java:869)
-	at org.thymeleaf.engine.TemplateManager.parseAndProcess(TemplateManager.java:607)
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1098)
-	at org.thymeleaf.TemplateEngine.process(TemplateEngine.java:1072)
-	at org.thymeleaf.spring5.view.ThymeleafView.renderFragment(ThymeleafView.java:362)
-	at org.thymeleaf.spring5.view.ThymeleafView.render(ThymeleafView.java:189)
-	at org.springframework.web.servlet.DispatcherServlet.render(DispatcherServlet.java:1371)
-	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1117)
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1056)
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.lang.Thread.run(Thread.java:748)
-2019-07-20 15:43:19.898 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563622999894,"response_time_after":1563622999898,"response_time":1563622999898,"response_duration":4,"request_uri":"/error","response_time_after_duration":4}
+2019-07-20 15:08:52.663 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-20 15:08:52.668 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-20 15:08:53.039 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-20 15:08:53.368 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-20 15:08:55.023 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-20 15:08:56.132 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-20 15:08:56.461 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-20 15:08:56.790 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-20 15:08:57.033 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-20 15:08:57.301 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-07-20 15:08:57.340 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-07-20 15:08:57.421 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-07-20 15:08:57.988 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-20 15:08:58.043 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-20 15:08:58.049 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 15.211 seconds (JVM running for 19.692)
+2019-07-20 15:10:15.541 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-20 15:10:15.542 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-20 15:10:15.567 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 25 ms
+2019-07-20 15:10:16.257 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621015634,"response_time_after":1563621016206,"response_time":1563621016181,"response_duration":547,"request_uri":"/","response_time_after_duration":572}
+2019-07-20 15:10:16.367 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621016365,"response_time_after":1563621016367,"response_time":1563621016367,"response_duration":2,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":2}
+2019-07-20 15:10:16.490 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621016384,"response_time_after":1563621016490,"response_time":1563621016490,"response_duration":106,"request_uri":"/error","response_time_after_duration":106}
+2019-07-20 15:10:16.957 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621016895,"response_time_after":1563621016957,"response_time":1563621016956,"response_duration":61,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":62}
+2019-07-20 15:10:17.013 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621016996,"response_time_after":1563621017013,"response_time":1563621017013,"response_duration":17,"request_uri":"/swagger-resources","response_time_after_duration":17}
+2019-07-20 15:10:17.567 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563621017557,"response_time_after":1563621017567,"response_time":1563621017566,"response_duration":9,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":10}
