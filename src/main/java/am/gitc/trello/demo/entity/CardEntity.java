@@ -1,4 +1,4 @@
-package am.trello.demo.entity;
+package am.gitc.trello.demo.entity;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package am.trello.demo;
+package am.gitc.trello.demo;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

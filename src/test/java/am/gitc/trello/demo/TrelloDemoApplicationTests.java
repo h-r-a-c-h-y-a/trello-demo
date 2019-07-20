@@ -1,4 +1,4 @@
-package am.trello.demo;
+package am.gitc.trello.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
