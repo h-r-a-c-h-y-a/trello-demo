@@ -8,7 +8,7 @@ CREATE TABLE users
     password  VARCHAR(255) NOT NULL,
     full_name VARCHAR(255) NOT NULL,
     user_name VARCHAR(255) NOT NULL,
-    initial   CHAR(3)      NOT NULL,
+    initial   CHAR(3),
     image_url VARCHAR(255) DEFAULT 'images/user.png',
     about_me  VARCHAR(255)
 );

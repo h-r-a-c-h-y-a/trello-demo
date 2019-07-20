@@ -3,10 +3,7 @@ package am.gitc.trello.demo.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
 @Data
 @Entity
@@ -36,13 +33,15 @@ public class UserEntity {
     @Column(name = "user_name")
     private String userName;
 
-    @NotBlank
-    @NotNull
-    private String initial = "" + fullName.split(" ")[0].toUpperCase().charAt(0) + "" + fullName.split(" ")[1].toUpperCase().charAt(0);
+    private String initial ;
 
     @Column(name = "image_url")
     private String imageUrl;
 
     @Column(name = "about_me")
     private String aboutMe;
+
+    public void setInitial(String fullName){
+        this.initial = "" + fullName.split(" ")[0].toUpperCase().charAt(0) + "" + fullName.split(" ")[1].toUpperCase().charAt(0);
+    }
 }
