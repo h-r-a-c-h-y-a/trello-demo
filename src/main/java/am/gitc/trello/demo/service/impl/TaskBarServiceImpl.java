@@ -7,5 +7,5 @@ import org.springframework.stereotype.Component;
  * Created by User on 20.07.2019.
  */
 @Component
-public class TaskBarServiceImpl implements TaskBarService{
+public class TaskBarServiceImpl implements TaskBarService {
 }

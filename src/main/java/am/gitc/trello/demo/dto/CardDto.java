@@ -1,33 +1,37 @@
 package am.gitc.trello.demo.dto;
 
-import lombok.*;
+import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
-import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Created by User on 20.07.2019.
  */
+
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @EqualsAndHashCode
 public class CardDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     private Integer id;
 
-    @Column(name = "title")
+    @NotNull
+    @NotBlank
+    @Size(max = 100)
     private String title;
 
-    @Column(name = "description")
     private String description;
 
-    @Column(name = "comment")
     private String comment;
 
-    @Column(name = "history")
+    @Size(max = 100)
     private String history;
 
 }
