@@ -12,8 +12,6 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-@Entity
-@Table(name = "cards")
 public class CardDto {
 
     @Id

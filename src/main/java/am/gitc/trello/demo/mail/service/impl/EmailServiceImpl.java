@@ -1,5 +1,6 @@
 package am.gitc.trello.demo.mail.service.impl;
 
+import am.gitc.trello.demo.entity.UserEntity;
 import am.gitc.trello.demo.mail.dto.MimeMailDto;
 import am.gitc.trello.demo.mail.dto.Protocol;
 import am.gitc.trello.demo.mail.dto.SimpleMailDto;
@@ -127,6 +128,19 @@ public class EmailServiceImpl implements EmailService {
         }
     }
 
+    @Override
+    public void validateEmail(UserEntity entity) throws MessagingException {
+        String text = String.format("<h1 style = \"background-color:rgb(183, 255, 255); color:black\" >Hello %s!! " +
+                "For activation your account <a href='http://localhost:8080/activate/%s' style = \"background-color:rgb(157, 243, 217); color:rgb(16, 12, 122)\"><i>please click here</i></a> " +
+                "</br> Enjoy using the product!</h1>", entity.getFullName(), entity.getActivationCode());
+        MimeMessage message = mailSender.createMimeMessage();
+        MimeMessageHelper helper = new MimeMessageHelper(message, "UTF-8");
+        helper.setTo(entity.getEmail());
+        helper.setSubject("Trello. Activation Code!");
+        helper.setText(text, true);
+        this.mailSender.send(message);
+    }
+
     private static Properties getServerProperties(Protocol protocolType) {
         Properties properties = new Properties();
         properties.put(String.format("spring.mail.%s.host", protocolType.getProtocol()), protocolType.getHost());
@@ -137,4 +151,5 @@ public class EmailServiceImpl implements EmailService {
         properties.setProperty("spring.mail.password", Protocol.PASSWORD);
         return properties;
     }
+
 }

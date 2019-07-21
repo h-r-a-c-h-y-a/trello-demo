@@ -1,5 +1,6 @@
 package am.gitc.trello.demo.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import javax.persistence.*;
@@ -13,32 +14,32 @@ import javax.persistence.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
-@Entity
-@Table(name = "users")
 public class UserDto {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "email")
     private String email;
 
-    @Column(name = "password")
+
     private String password;
 
-    @Column(name = "full_name")
+    @JsonProperty(value = "full_name")
     private String fullName;
 
-    @Column(name = "user_name")
+    @JsonProperty(value = "user_name")
     private String userName;
 
-    @Column(name = "initial")
     private String initial;
 
-    @Column(name = "image_url")
+    private String activationCode;
+
+    @JsonProperty(value = "image_url")
     private String imageUrl;
 
-    @Column(name = "about_me")
+    @JsonProperty(value = "about_me")
     private String aboutMe;
+
+    public void setInitial() {
+        this.initial = "" + this.fullName.split(" ")[0].toUpperCase().charAt(0) + "" + this.fullName.split(" ")[1].toUpperCase().charAt(0);
+    }
 }

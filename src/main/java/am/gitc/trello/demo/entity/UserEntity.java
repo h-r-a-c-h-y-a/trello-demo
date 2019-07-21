@@ -41,7 +41,6 @@ public class UserEntity {
     @Column(name = "about_me")
     private String aboutMe;
 
-    public void setInitial(String fullName){
-        this.initial = "" + fullName.split(" ")[0].toUpperCase().charAt(0) + "" + fullName.split(" ")[1].toUpperCase().charAt(0);
-    }
+    @Column(name = "activation_code")
+    private String activationCode;
 }
