@@ -23,11 +23,9 @@ public class SwaggerConfig {
     @Bean
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
-//                .select()
                 .forCodeGeneration(Boolean.TRUE)
                 .select()
                 .apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
-//        apis(RequestHandlerSelectors.basePackage("am.gitc.trello.demo.mail.controller"))
                 .paths(PathSelectors.any()).build().pathMapping("/")
                 .apiInfo(apiInfo());
     }

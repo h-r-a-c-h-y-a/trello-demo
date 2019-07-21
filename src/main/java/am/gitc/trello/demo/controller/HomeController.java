@@ -1,51 +1,13 @@
 package am.gitc.trello.demo.controller;
 
-import am.gitc.trello.demo.dto.CardDto;
-import am.gitc.trello.demo.entity.CardEntity;
-import am.gitc.trello.demo.mapper.CardMapper;
-import am.gitc.trello.demo.service.CardService;
-import io.swagger.models.auth.In;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Created by User on 20.07.2019.
  */
 
 @RestController
-public class CardController {
-
-    private final CardService cardService;
-    private final CardMapper cardMapper;
-
-    @Autowired
-    public CardController(CardService cardService, CardMapper cardMapper) {
-        this.cardMapper = cardMapper;
-        this.cardService = cardService;
-    }
-
-    @PostMapping("/api/cards")
-    public ResponseEntity<CardDto> createCard(@RequestBody CardDto cardDto) {
-        CardEntity cardEntity = this.cardMapper.toEntity(cardDto);
-        cardEntity = this.cardService.createCard(cardEntity);
-        return ResponseEntity.ok(this.cardMapper.toDto(cardEntity));
-    }
-
-    @PutMapping("/api/cards")
-    public ResponseEntity<CardDto> updateCard(@RequestParam Integer id, @RequestBody CardDto cardDto){
-        CardEntity cardEntity = this.cardMapper.toEntity(cardDto);
-        cardEntity.setId(id);
-        cardEntity = this.cardService.updateCard(id, cardEntity);
-        return ResponseEntity.ok(this.cardMapper.toDto(cardEntity));
-    }
-
-    @DeleteMapping("/api/cards/{id}")
-    public ResponseEntity deleteCard(@PathVariable Integer id){
-        this.cardService.deleteCard(id);
-        return ResponseEntity.ok().build();
-    }
-
+public class HomeController{
 
 }
 
