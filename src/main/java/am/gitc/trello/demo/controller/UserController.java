@@ -56,66 +56,85 @@ public class UserController {
     }
 
     @PostMapping("/trello/users/register")
-    public ResponseEntity registration(@RequestBody UserDto userDto) {
-        userDto.setInitial();
-        UserEntity entity = this.userMapper.toEntity(userDto);
-        if (!this.userService.isExist(entity.getEmail())) {
-            entity.setActivationCode(UUID.randomUUID().toString());
-            this.userService.register(entity);
+    public ModelAndView registration(ModelAndView modelAndView, @ModelAttribute("userForm") UserEntity userEntity) {
+        userEntity.setInitial(userEntity.getFullName());
+        if (!this.userService.isExist(userEntity.getEmail())) {
+            userEntity.setActivationCode(UUID.randomUUID().toString());
+            this.userService.register(userEntity);
             try {
-                this.emailService.validateEmail(entity);
+                this.emailService.validateEmail(userEntity);
             } catch (MessagingException e) {
                 e.printStackTrace();
             }
         } else {
-            return ResponseEntity.ok("User with email: " + userDto.getEmail() + " is already exist");
+            modelAndView.addObject("RegisterFailed", "User with email: " + userEntity.getEmail() + " is already exist");
+            modelAndView.setViewName("register");
+            return modelAndView;
         }
-        return ResponseEntity.ok("An activation link has been sent to your mail. Please confirm by clicking on this link.");
+        modelAndView.setViewName("register");
+        modelAndView.addObject("CodeMessage", "An activation link has been sent to your mail. Please confirm by clicking on this link.");
+        return modelAndView;
     }
 
 
     @GetMapping("/trello/users/activate/{activation_code}")
-    public ResponseEntity activateAccount(@PathVariable("activation_code") String activationCode) {
+    public ModelAndView activateAccount(ModelAndView modelAndView,
+                                        @PathVariable("activation_code") String activationCode) {
         boolean active = this.userService.hasActiveCode(activationCode);
         if (!active) {
-            return ResponseEntity.ok("Activation code not found");
+            modelAndView.setViewName("register");
+            modelAndView.addObject("ActivationFailed", "Activation code not found");
         }
-        return ResponseEntity.ok("User successfully registered");
+        modelAndView.setViewName("login");
+        modelAndView.addObject("RegisterSuccess", "Successfully registered!");
+        return modelAndView;
     }
 
 
     @GetMapping("/trello/users/{userId}")
-    public ResponseEntity<UserDto> getUserById(@PathVariable("userId") Integer userId) {
+    public ModelAndView getUserById(ModelAndView modelAndView,
+                                    @PathVariable("userId") Integer userId) {
         Optional<UserEntity> userEntity = this.userService.getUser(userId);
         if (!userEntity.isPresent()) {
             logger.warn("Users with id = {} not found.", userId);
-            return ResponseEntity.notFound().build();
+            modelAndView.addObject("NotFound", "Users with id = " + userId + "not found.");
+            return modelAndView;
         }
-        return ResponseEntity.ok(this.userMapper.toDto(userEntity.get()));
+        modelAndView.addObject("user", this.userMapper.toDto(userEntity.get()));
+        return modelAndView;
     }
 
 
     @GetMapping("/trello/users")
-    public ResponseEntity<List<UserDto>> getAllUsers() {
+    public ModelAndView getAllUsers(ModelAndView modelAndView) {
         logger.info("Fetching all users.");
-        return ResponseEntity.ok(this.userMapper.toDtoList(this.userService.getAll()));
+        modelAndView.addObject("users", this.userMapper.toDtoList(this.userService.getAll()));
+        return modelAndView;
     }
 
 
     @PostMapping("/trello/users/login")
-    public ResponseEntity login(@RequestBody UserData userData) {
-        Optional<UserEntity> entity = userService.login(userData.getEmail(), userData.getPassword());
+    public ModelAndView login(ModelAndView modelAndView,
+                              @ModelAttribute UserEntity userEntity) {
+        Optional<UserEntity> entity = userService.login(userEntity.getEmail(), userEntity.getPassword());
         if (entity.isPresent()) {
-            return ResponseEntity.ok("USER LOGGED IN");
+
+            modelAndView.addObject("user", entity);
+            return modelAndView;
         }
-        return ResponseEntity.notFound().build();
+        modelAndView.addObject("LoginFailed", "password or email are wrong, please enter again");
+        modelAndView.setViewName("login");
+        return modelAndView;
     }
 
 
     @DeleteMapping("/trello/users/{user_id}")
-    public ResponseEntity deleteUserById(@PathVariable("user_id") Integer userId) {
+    public ModelAndView deleteUserById(ModelAndView modelAndView,
+                                       Integer userId) {
         this.userService.delete(userId);
-        return ResponseEntity.ok().build();
+        modelAndView.addObject("DeleteUser", "Your request has been successfully accepted!");
+        modelAndView.setViewName("login");
+        return modelAndView;
     }
 
     @Data

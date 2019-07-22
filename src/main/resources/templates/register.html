@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Spring Security Example </title>
 </head>
@@ -12,13 +11,13 @@
     You have been logged out.
 </div>
 <form th:action="@{/trello/users/login}" th:object="${user}" method="post" enctype="multipart/form-data">
-    <div><label> Full Name : <input type="text" name="username"/> </label></div>
-    <div><label> User Name: <input type="password" name="password"/> </label></div>
-    <div><label> Email : <input type="text" name="username"/> </label></div>
-    <div><label> Password: <input type="password" name="password"/> </label></div>
-    <div><label> About Me : <textarea name="aboutme" ></textarea> </label></div>
+    <div><label> Full Name : <input type="text" name="fullname"th:field="*{fullName}" /> </label></div>
+    <div><label> User Name: <input type="text" name="username" th:field="*{userName}"/> </label></div>
+    <div><label> Email : <input type="email" name="email" th:field="*{email}"/> </label></div>
+    <div><label> Password: <input type="password" name="password" th:field="*{password}"/> </label></div>
+    <div><label> About Me : <textarea name="aboutme" th:field="*{aboutMe}"></textarea > </label></div>
     <div><label for="file">Choose file to upload</label>
-        <input type="file" id="file" name="file" multiple></div>
+        <input type="file" id="file" name="file" multiple th:field="*{imageUrl}"/></div>
     <div><input type="submit" value="Sign In"/></div>
 </form>
 </body>

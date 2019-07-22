@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import java.util.Set;
 
 @Data
 @Entity
@@ -43,4 +44,9 @@ public class UserEntity {
 
     @Column(name = "activation_code")
     private String activationCode;
+
+    @ElementCollection(fetch = FetchType.EAGER)
+    @CollectionTable(name = "users_roles",
+            joinColumns = @JoinColumn(name = "user_id"))
+    private Set<RoleEnitiy> roles;
 }

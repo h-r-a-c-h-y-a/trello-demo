@@ -21,6 +21,7 @@ import javax.sql.DataSource;
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final DataSource dataSource;
+    private final PasswordEncoder passwordEncoder;
 
     @Value("${spring.queries.users-query}")
     private String usersQuery;
@@ -29,7 +30,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private String rolesQuery;
 
     @Autowired
-    public SecurityConfig(DataSource dataSource) {
+    public SecurityConfig(PasswordEncoder passwordEncoder, DataSource dataSource) {
+        this.passwordEncoder = passwordEncoder;
         this.dataSource = dataSource;
     }
 
@@ -38,11 +40,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
-
-    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -65,16 +62,16 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/resources/**", "/static/**", "/css/**", "/js/**", "/images/**");
     }
 
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth.
-//                jdbcAuthentication()
-//                .usersByUsernameQuery(usersQuery)
-//                .authoritiesByUsernameQuery(rolesQuery)
-//                .dataSource(dataSource)
-//                .passwordEncoder(passwordEncoder);
-//    }
-//
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.
+                jdbcAuthentication()
+                .dataSource(dataSource)
+                .usersByUsernameQuery(usersQuery)
+                .authoritiesByUsernameQuery(rolesQuery)
+                .passwordEncoder(passwordEncoder);
+    }
+
 //    @Override
 //    protected void configure(HttpSecurity http) throws Exception {
 //        http.
