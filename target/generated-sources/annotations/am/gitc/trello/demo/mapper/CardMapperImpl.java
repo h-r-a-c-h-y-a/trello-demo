@@ -9,8 +9,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2019-07-20T16:14:50+0400",
-    comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_131 (Oracle Corporation)"
+    date = "2019-07-21T21:37:06+0400",
+    comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_201 (Oracle Corporation)"
 )
 @Component
 public class CardMapperImpl implements CardMapper {
@@ -23,7 +23,7 @@ public class CardMapperImpl implements CardMapper {
 
         CardDto cardDto = new CardDto();
 
-        cardDto.setId( entity.getId() );
+        cardDto.setId( (int) entity.getId() );
         cardDto.setTitle( entity.getTitle() );
         cardDto.setDescription( entity.getDescription() );
         cardDto.setComment( entity.getComment() );
@@ -41,7 +41,7 @@ public class CardMapperImpl implements CardMapper {
         CardEntity cardEntity = new CardEntity();
 
         if ( dto.getId() != null ) {
-            cardEntity.setId( dto.getId() );
+            cardEntity.setId( dto.getId().shortValue() );
         }
         cardEntity.setTitle( dto.getTitle() );
         cardEntity.setDescription( dto.getDescription() );
