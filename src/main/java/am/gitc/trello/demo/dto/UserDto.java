@@ -40,6 +40,6 @@ public class UserDto {
     private String aboutMe;
 
     public void setInitial() {
-        this.initial = "" + this.fullName.split("//s+")[0].toUpperCase().charAt(0) + "" + this.fullName.split("//s+")[1].toUpperCase().charAt(0);
+        this.initial = "" + this.fullName.split(" ")[0].toUpperCase().charAt(0) + "" + this.fullName.split(" ")[1].toUpperCase().charAt(0);
     }
 }
