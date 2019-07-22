@@ -13,6 +13,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -39,6 +40,20 @@ public class UserController {
         this.userMapper = userMapper;
     }
 
+
+    @GetMapping({"/", "/trello/users/login"})
+    public ModelAndView goTologinPage(ModelAndView model){
+        model.addObject("user", new UserEntity());
+        model.setViewName("login");
+        return model;
+    }
+
+    @GetMapping("/trello/users/register")
+    public ModelAndView goToRegPage(ModelAndView model){
+        model.addObject("user", new UserEntity());
+        model.setViewName("register");
+        return model;
+    }
 
     @PostMapping("/trello/users/register")
     public ResponseEntity registration(@RequestBody UserDto userDto) {

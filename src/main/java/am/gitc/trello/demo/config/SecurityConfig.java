@@ -48,11 +48,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-                .antMatchers("/","/api/users/login","/api/users/register").permitAll()
+                .antMatchers("/", "/trello/users/register").permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
                 .formLogin()
+                .loginPage("/trello/users/login").failureUrl("/trello/users/login?error=true")
+                .permitAll()
                 .and()
                 .logout().permitAll();
     }
