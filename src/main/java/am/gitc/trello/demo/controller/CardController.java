@@ -24,14 +24,14 @@ public class CardController {
         this.cardService = cardService;
     }
 
-    @PostMapping("/api/cards")
+    @PostMapping("/trello/cards")
     public ResponseEntity<CardDto> createCard(@RequestBody CardDto cardDto) {
         CardEntity cardEntity = this.cardMapper.toEntity(cardDto);
         cardEntity = this.cardService.createCard(cardEntity);
         return ResponseEntity.ok(this.cardMapper.toDto(cardEntity));
     }
 
-    @PutMapping("/api/cards")
+    @PutMapping("/trello/cards")
     public ResponseEntity<CardDto> updateCard(@RequestParam Short id, @RequestBody CardDto cardDto){
         CardEntity cardEntity = this.cardMapper.toEntity(cardDto);
         cardEntity.setId(id);
@@ -39,7 +39,7 @@ public class CardController {
         return ResponseEntity.ok(this.cardMapper.toDto(cardEntity));
     }
 
-    @DeleteMapping("/api/cards/{id}")
+    @DeleteMapping("/trello/cards/{id}")
     public ResponseEntity deleteCard(@PathVariable Short id){
         this.cardService.deleteCard(id);
         return ResponseEntity.ok().build();

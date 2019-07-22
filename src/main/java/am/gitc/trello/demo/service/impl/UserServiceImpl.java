@@ -27,19 +27,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void login(String email, String password) {
-
+    public Optional<UserEntity> login(String email, String password) {
+        return this.userRepository.findByEmailAndPassword(email, password);
     }
 
     @Override
     public boolean isExist(String email) {
         return this.userRepository.existsByEmail(email);
-    }
-
-    @Override
-    public boolean isExist(int id) {
-        return this.userRepository.existsById(id);
-
     }
 
     @Override
@@ -50,11 +44,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<UserEntity> getUser(int id) {
         return this.userRepository.findById(id);
-    }
-
-    @Override
-    public Optional<UserEntity> getUser(String email, String password) {
-        return this.userRepository.findByEmailAndPassword(email, password);
     }
 
     @Override

@@ -5,14 +5,20 @@ import am.gitc.trello.demo.entity.UserEntity;
 import am.gitc.trello.demo.mail.service.EmailService;
 import am.gitc.trello.demo.mapper.UserMapper;
 import am.gitc.trello.demo.service.UserService;
+import am.gitc.trello.demo.validation.annotations.ValidPassword;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.mail.MessagingException;
+import javax.persistence.Entity;
+import javax.validation.constraints.Email;
 import javax.websocket.server.PathParam;
 import java.util.List;
 import java.util.Optional;
@@ -34,7 +40,7 @@ public class UserController {
     }
 
 
-    @PostMapping("/register")
+    @PostMapping("/trello/users/register")
     public ResponseEntity registration(@RequestBody UserDto userDto) {
         userDto.setInitial();
         UserEntity entity = this.userMapper.toEntity(userDto);
@@ -53,8 +59,7 @@ public class UserController {
     }
 
 
-
-    @GetMapping("/activate/{activation_code}")
+    @GetMapping("/trello/users/activate/{activation_code}")
     public ResponseEntity activateAccount(@PathVariable("activation_code") String activationCode) {
         boolean active = this.userService.hasActiveCode(activationCode);
         if (!active) {
@@ -64,7 +69,7 @@ public class UserController {
     }
 
 
-    @GetMapping("/api/users/{userId}")
+    @GetMapping("/trello/users/{userId}")
     public ResponseEntity<UserDto> getUserById(@PathVariable("userId") Integer userId) {
         Optional<UserEntity> userEntity = this.userService.getUser(userId);
         if (!userEntity.isPresent()) {
@@ -75,34 +80,37 @@ public class UserController {
     }
 
 
-    @GetMapping("/api/users")
+    @GetMapping("/trello/users")
     public ResponseEntity<List<UserDto>> getAllUsers() {
         logger.info("Fetching all users.");
         return ResponseEntity.ok(this.userMapper.toDtoList(this.userService.getAll()));
     }
 
 
-    @GetMapping("/api/users/_search")
-    public ResponseEntity<UserDto> getUserByEmailAndPassword(@PathParam("email") String email,
-                                                             @PathParam("password") String password) {
-        try {
-            Optional<UserEntity> userEntity = this.userService.getUser(email, password);
-            if (!userEntity.isPresent()) {
-                return ResponseEntity.notFound().build();
-            }
-            return ResponseEntity.ok(this.userMapper.toDto(userEntity.get()));
-        } catch (Exception e) {
-            logger.error("ERROR", e);
+    @PostMapping("/trello/users/login")
+    public ResponseEntity login(@RequestBody UserData userData) {
+        Optional<UserEntity> entity = userService.login(userData.getEmail(), userData.getPassword());
+        if (entity.isPresent()) {
+            return ResponseEntity.ok("USER LOGGED IN");
         }
-        return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        return ResponseEntity.notFound().build();
     }
 
 
-
-    @DeleteMapping("/api/users/{user_id}")
+    @DeleteMapping("/trello/users/{user_id}")
     public ResponseEntity deleteUserById(@PathVariable("user_id") Integer userId) {
         this.userService.delete(userId);
         return ResponseEntity.ok().build();
     }
 
+    @Data
+    @EqualsAndHashCode
+    private static class UserData {
+
+        @Email(message = "please enter valid email")
+        private String email;
+
+        @ValidPassword
+        private String password;
+    }
 }

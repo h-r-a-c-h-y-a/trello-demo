@@ -10,17 +10,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface CardRepository extends JpaRepository<CardEntity, Integer> {
-    @Query(value = "update cards c set c.title = :title where c.id = :id", nativeQuery = true)
-    CardEntity updateCardChangingTitle(int id, String title);
-
-    @Query(value = "update cards c set c.comment = :comment where c.id = :id", nativeQuery = true)
-    String updateCarddAddingComment(int id, String comment);
-
-    @Query(value = "update cards c set c.description = :description where c.id = :id", nativeQuery = true)
-    String updateCardAddingDescription(int id, String description);
-
-    @Query(value = "update cards c set c.comment = :comment where c.id = :id", nativeQuery = true)
-    String updateCardDeletingComment(int id, String comment);
-
     void deleteById(short id);
 }
