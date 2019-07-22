@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2019-07-20T16:11:06+0400",
+    date = "2019-07-21T15:05:55+0400",
     comments = "version: 1.2.0.Final, compiler: javac, environment: Java 1.8.0_131 (Oracle Corporation)"
 )
 @Component
@@ -23,7 +23,6 @@ public class UserMapperImpl implements UserMapper {
 
         UserDto userDto = new UserDto();
 
-        userDto.setInitial( entity.getInitial() );
         if ( entity.getId() != null ) {
             userDto.setId( entity.getId().intValue() );
         }
@@ -31,6 +30,8 @@ public class UserMapperImpl implements UserMapper {
         userDto.setPassword( entity.getPassword() );
         userDto.setFullName( entity.getFullName() );
         userDto.setUserName( entity.getUserName() );
+        userDto.setInitial( entity.getInitial() );
+        userDto.setActivationCode( entity.getActivationCode() );
         userDto.setImageUrl( entity.getImageUrl() );
         userDto.setAboutMe( entity.getAboutMe() );
 
@@ -45,7 +46,6 @@ public class UserMapperImpl implements UserMapper {
 
         UserEntity userEntity = new UserEntity();
 
-        userEntity.setInitial( dto.getInitial() );
         if ( dto.getId() != null ) {
             userEntity.setId( dto.getId().longValue() );
         }
@@ -53,8 +53,10 @@ public class UserMapperImpl implements UserMapper {
         userEntity.setPassword( dto.getPassword() );
         userEntity.setFullName( dto.getFullName() );
         userEntity.setUserName( dto.getUserName() );
+        userEntity.setInitial( dto.getInitial() );
         userEntity.setImageUrl( dto.getImageUrl() );
         userEntity.setAboutMe( dto.getAboutMe() );
+        userEntity.setActivationCode( dto.getActivationCode() );
 
         return userEntity;
     }
