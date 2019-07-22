@@ -35,7 +35,7 @@ public class CardController {
     public ResponseEntity<CardDto> updateCard(@RequestParam Short id, @RequestBody CardDto cardDto){
         CardEntity cardEntity = this.cardMapper.toEntity(cardDto);
         cardEntity.setId(id);
-        cardEntity = this.cardService.updateCard(id, cardEntity);
+        cardEntity = this.cardService.updateCard(cardEntity);
         return ResponseEntity.ok(this.cardMapper.toDto(cardEntity));
     }
 

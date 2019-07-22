@@ -11,5 +11,5 @@ public interface CardService {
 
     void deleteCard(short id);
 
-    CardEntity updateCard(short id, CardEntity cardEntity);
+    CardEntity updateCard(CardEntity cardEntity);
 }

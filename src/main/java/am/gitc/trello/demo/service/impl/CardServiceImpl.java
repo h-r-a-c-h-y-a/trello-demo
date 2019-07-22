@@ -31,8 +31,8 @@ public class CardServiceImpl implements CardService{
     }
 
     @Override
-    public CardEntity updateCard(short id, CardEntity cardEntity) {
-        cardEntity.setId(id);
+    public CardEntity updateCard(CardEntity cardEntity) {
+
         return this.cardRepository.save(cardEntity);
     }
 

@@ -22,4 +22,5 @@ public interface CardRepository extends JpaRepository<CardEntity, Integer> {
     @Query(value = "update cards c set c.comment = :comment where c.id = :id", nativeQuery = true)
     String updateCardDeletingComment(int id, String comment);
 
+    void deleteById(short id);
 }
