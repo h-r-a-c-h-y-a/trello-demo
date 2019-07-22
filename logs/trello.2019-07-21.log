@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2019-07-21 15:06:18.282 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on DESKTOP-5BEUF0B with PID 5412 (C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo1\target\classes started by User in C:\Users\User\Desktop\FirstLesson\spring_security\trello-demo1)
 2019-07-21 15:06:18.282 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
 2019-07-21 15:06:20.106 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
@@ -400,6 +401,96 @@ List of constraint violations:[
 	at com.sun.proxy.$Proxy98.save(Unknown Source)
 	at am.gitc.trello.demo.service.impl.UserServiceImpl.register(UserServiceImpl.java:28)
 	at am.gitc.trello.demo.controller.UserController.registration(UserController.java:35)
+=======
+2019-07-21 17:51:47.424 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 4564 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-21 17:51:47.433 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-21 17:51:50.401 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-21 17:51:50.628 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 202ms. Found 2 repository interfaces.
+2019-07-21 17:51:51.686 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2581bff4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-21 17:51:52.604 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-21 17:51:52.639 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-21 17:51:52.662 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-21 17:51:52.663 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-21 17:51:52.981 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-21 17:51:52.982 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5388 ms
+2019-07-21 17:51:53.899 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-21 17:51:55.727 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-21 17:51:56.185 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-21 17:51:56.557 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-21 17:51:56.561 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-21 17:51:57.198 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-21 17:51:57.994 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-21 17:52:00.882 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 17:52:03.171 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-21 17:52:04.012 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-21 17:52:04.482 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-21 17:52:04.789 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-21 17:52:08.881 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-07-21 17:52:08.958 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-07-21 17:52:09.056 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-07-21 17:52:09.708 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-21 17:52:10.273 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-21 17:52:10.280 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 23.936 seconds (JVM running for 32.585)
+2019-07-21 17:52:20.154 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-21 17:52:20.155 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-21 17:52:20.400 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 245 ms
+2019-07-21 17:52:21.047 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563717140655,"response_time_after":1563717140812,"response_time":1563717140789,"response_duration":134,"request_uri":"/","response_time_after_duration":157}
+2019-07-21 17:52:21.050 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563717140655,"response_time_after":1563717140809,"response_time":1563717140789,"response_duration":134,"request_uri":"/","response_time_after_duration":154}
+2019-07-21 17:52:21.933 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563717141927,"response_time_after":1563717141933,"response_time":1563717141929,"response_duration":2,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":6}
+2019-07-21 17:52:22.955 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563717141955,"response_time_after":1563717142954,"response_time":1563717142954,"response_duration":999,"request_uri":"/error","response_time_after_duration":999}
+2019-07-21 17:52:24.527 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563717144376,"response_time_after":1563717144527,"response_time":1563717144526,"response_duration":150,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":151}
+2019-07-21 17:52:24.602 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563717144581,"response_time_after":1563717144602,"response_time":1563717144602,"response_duration":21,"request_uri":"/swagger-resources","response_time_after_duration":21}
+2019-07-21 17:52:25.759 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563717145750,"response_time_after":1563717145759,"response_time":1563717145759,"response_duration":9,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":9}
+2019-07-21 17:54:55.020 INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2019-07-21 17:55:00.817 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563717294765,"response_time_after":1563717300816,"response_time":1563717300816,"response_duration":6051,"request_uri":"/register","response_time_after_duration":6051}
+2019-07-21 18:33:57.940 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 1128 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-21 18:33:57.970 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-21 18:34:02.502 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-21 18:34:02.758 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 236ms. Found 2 repository interfaces.
+2019-07-21 18:34:03.690 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4e928389] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-21 18:34:04.689 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-21 18:34:04.750 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-21 18:34:04.792 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-21 18:34:04.792 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-21 18:34:07.088 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-21 18:34:07.089 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 8965 ms
+2019-07-21 18:34:07.685 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-21 18:34:09.612 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-21 18:34:09.888 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-21 18:34:10.179 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-21 18:34:10.183 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-21 18:34:10.796 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-21 18:34:11.257 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-21 18:34:13.494 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 18:34:17.011 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-21 18:34:17.512 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-21 18:34:17.882 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-21 18:34:18.135 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-21 18:34:22.319 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-07-21 18:34:22.402 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-07-21 18:34:22.566 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-07-21 18:34:23.575 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-21 18:34:23.650 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-21 18:34:23.656 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 28.398 seconds (JVM running for 36.143)
+2019-07-21 19:43:08.316 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-21 19:43:08.318 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-21 19:43:08.360 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 42 ms
+2019-07-21 19:43:08.643 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563723788432,"response_time_after":1563723788536,"response_time":1563723788514,"response_duration":82,"request_uri":"/","response_time_after_duration":104}
+2019-07-21 19:43:08.852 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563723788846,"response_time_after":1563723788848,"response_time":1563723788848,"response_duration":2,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":2}
+2019-07-21 19:43:11.493 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563723788909,"response_time_after":1563723791493,"response_time":1563723791491,"response_duration":2582,"request_uri":"/error","response_time_after_duration":2584}
+2019-07-21 19:43:14.050 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563723793865,"response_time_after":1563723794050,"response_time":1563723794049,"response_duration":184,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":185}
+2019-07-21 19:43:14.083 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563723794068,"response_time_after":1563723794082,"response_time":1563723794082,"response_duration":14,"request_uri":"/swagger-resources","response_time_after_duration":14}
+2019-07-21 19:43:14.874 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563723794866,"response_time_after":1563723794874,"response_time":1563723794874,"response_duration":8,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":8}
+2019-07-21 19:44:34.896 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563723874675,"response_time_after":1563723874896,"request_uri":"/register","response_time_after_duration":221}
+2019-07-21 19:44:34.921 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.ArrayIndexOutOfBoundsException: 1] with root cause
+java.lang.ArrayIndexOutOfBoundsException: 1
+	at am.gitc.trello.demo.dto.UserDto.setInitial(UserDto.java:43)
+	at am.gitc.trello.demo.controller.UserController.registration(UserController.java:31)
+>>>>>>> 5f4712a003b5b828bfdc6080f0fa3cbc366286d0
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -450,6 +541,7 @@ List of constraint violations:[
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<<<<<<< HEAD
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
@@ -525,10 +617,76 @@ List of constraint violations:[
 	at com.sun.proxy.$Proxy98.save(Unknown Source)
 	at am.gitc.trello.demo.service.impl.UserServiceImpl.register(UserServiceImpl.java:28)
 	at am.gitc.trello.demo.controller.UserController.registration(UserController.java:35)
+=======
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-21 19:44:34.929 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563723874924,"response_time_after":1563723874929,"response_time":1563723874928,"response_duration":4,"request_uri":"/error","response_time_after_duration":5}
+2019-07-21 21:01:36.644 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 4300 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-21 21:01:36.661 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-21 21:01:41.680 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-21 21:01:41.977 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 265ms. Found 2 repository interfaces.
+2019-07-21 21:01:43.385 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b0ba9915] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-21 21:01:44.820 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-21 21:01:44.871 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-21 21:01:44.899 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-21 21:01:44.900 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-21 21:01:45.571 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-21 21:01:45.582 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 8550 ms
+2019-07-21 21:01:46.326 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-21 21:01:48.009 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-21 21:01:48.429 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-21 21:01:48.808 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-21 21:01:48.812 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-21 21:01:49.658 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-21 21:01:50.178 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-21 21:01:53.621 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:01:55.609 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-21 21:01:56.521 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@62b786dc, org.springframework.security.web.context.SecurityContextPersistenceFilter@63b4b9c6, org.springframework.security.web.header.HeaderWriterFilter@6e090aaa, org.springframework.security.web.csrf.CsrfFilter@e36bc01, org.springframework.security.web.authentication.logout.LogoutFilter@7d18338b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3fd5d679, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@603f4e3e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@669c2b07, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ba1cdbe, org.springframework.security.web.session.SessionManagementFilter@768f4b42, org.springframework.security.web.access.ExceptionTranslationFilter@6921cfa, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@22899683]
+2019-07-21 21:01:56.589 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-21 21:01:57.130 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-21 21:01:57.548 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-21 21:02:01.891 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Mail server is not available
+2019-07-21 21:02:01.893 INFO  o.s.s.c.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2019-07-21 21:02:01.899 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:02:01.904 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-21 21:02:01.921 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-21 21:02:01.928 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-21 21:02:01.977 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-21 21:02:02.007 ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration': Invocation of init method failed; nested exception is java.lang.IllegalStateException: Mail server is not available
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:139)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:414)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1770)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:845)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:140)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:742)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:389)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:311)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1213)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1202)
+	at am.gitc.trello.demo.TrelloDemoApplication.main(TrelloDemoApplication.java:9)
+Caused by: java.lang.IllegalStateException: Mail server is not available
+	at org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration.validateConnection(MailSenderValidatorAutoConfiguration.java:55)
+>>>>>>> 5f4712a003b5b828bfdc6080f0fa3cbc366286d0
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
+<<<<<<< HEAD
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
 	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
 	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
@@ -670,6 +828,89 @@ List of constraint violations:[
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+=======
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:363)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:307)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:136)
+	... 18 common frames omitted
+Caused by: javax.mail.AuthenticationFailedException: 535-5.7.8 Username and Password not accepted. Learn more at
+535 5.7.8  https://support.google.com/mail/?p=BadCredentials s26sm7120793ljs.77 - gsmtp
+
+	at com.sun.mail.smtp.SMTPTransport$Authenticator.authenticate(SMTPTransport.java:965)
+	at com.sun.mail.smtp.SMTPTransport.authenticate(SMTPTransport.java:876)
+	at com.sun.mail.smtp.SMTPTransport.protocolConnect(SMTPTransport.java:780)
+	at javax.mail.Service.connect(Service.java:366)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.connectTransport(JavaMailSenderImpl.java:517)
+	at org.springframework.mail.javamail.JavaMailSenderImpl.testConnection(JavaMailSenderImpl.java:397)
+	at org.springframework.boot.autoconfigure.mail.MailSenderValidatorAutoConfiguration.validateConnection(MailSenderValidatorAutoConfiguration.java:52)
+	... 25 common frames omitted
+2019-07-21 21:03:31.140 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 2980 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-21 21:03:31.191 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-21 21:03:36.207 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-21 21:03:36.474 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 244ms. Found 2 repository interfaces.
+2019-07-21 21:03:37.617 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$617cd2bc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-21 21:03:38.420 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-21 21:03:38.483 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-21 21:03:38.513 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-21 21:03:38.514 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-21 21:03:38.968 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-21 21:03:38.969 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7517 ms
+2019-07-21 21:03:39.444 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-21 21:03:40.961 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-21 21:03:41.299 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-21 21:03:41.518 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-21 21:03:41.522 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-21 21:03:41.949 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-21 21:03:42.464 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-21 21:03:44.592 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:03:46.292 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-21 21:03:47.090 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2c1ea7be, org.springframework.security.web.context.SecurityContextPersistenceFilter@1b1ea1d9, org.springframework.security.web.header.HeaderWriterFilter@603f4e3e, org.springframework.security.web.csrf.CsrfFilter@592cb470, org.springframework.security.web.authentication.logout.LogoutFilter@42503099, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4e8afdad, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@55d99dc3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@37f71c05, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2493eec6, org.springframework.security.web.session.SessionManagementFilter@1d444652, org.springframework.security.web.access.ExceptionTranslationFilter@63b4b9c6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@7c4ca87c]
+2019-07-21 21:03:47.155 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-21 21:03:47.622 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-21 21:03:48.094 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-21 21:03:53.138 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-07-21 21:03:56.936 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-07-21 21:03:58.822 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-07-21 21:04:08.280 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-21 21:04:08.370 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-21 21:04:08.377 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 39.302 seconds (JVM running for 43.489)
+2019-07-21 21:04:38.829 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-21 21:04:38.831 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-21 21:04:39.409 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 576 ms
+2019-07-21 21:04:40.469 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563728680106,"response_time_after":1563728680320,"response_time":1563728680264,"response_duration":158,"request_uri":"/error","response_time_after_duration":214}
+2019-07-21 21:04:40.470 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563728680103,"response_time_after":1563728680318,"response_time":1563728680264,"response_duration":161,"request_uri":"/error","response_time_after_duration":215}
+2019-07-21 21:05:12.244 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:244)
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:198)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$LazyPasswordEncoder.matches(WebSecurityConfigurerAdapter.java:594)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:90)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:166)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:180)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+>>>>>>> 5f4712a003b5b828bfdc6080f0fa3cbc366286d0
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
@@ -700,6 +941,7 @@ List of constraint violations:[
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<<<<<<< HEAD
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
@@ -795,6 +1037,41 @@ List of constraint violations:[
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+=======
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-21 21:05:25.890 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:244)
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:198)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$LazyPasswordEncoder.matches(WebSecurityConfigurerAdapter.java:594)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:90)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:166)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:180)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+>>>>>>> 5f4712a003b5b828bfdc6080f0fa3cbc366286d0
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
@@ -825,6 +1102,7 @@ List of constraint violations:[
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<<<<<<< HEAD
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
@@ -973,6 +1251,41 @@ java.lang.NoSuchMethodError: am.gitc.trello.demo.entity.CardEntity.setId(S)V
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+=======
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-21 21:07:20.465 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:244)
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:198)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$LazyPasswordEncoder.matches(WebSecurityConfigurerAdapter.java:594)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:90)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:166)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:180)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+>>>>>>> 5f4712a003b5b828bfdc6080f0fa3cbc366286d0
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
@@ -1003,6 +1316,7 @@ java.lang.NoSuchMethodError: am.gitc.trello.demo.entity.CardEntity.setId(S)V
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<<<<<<< HEAD
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
@@ -1075,6 +1389,41 @@ java.lang.NoSuchMethodError: am.gitc.trello.demo.entity.CardEntity.setId(S)V
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+=======
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-21 21:07:33.136 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:244)
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:198)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$LazyPasswordEncoder.matches(WebSecurityConfigurerAdapter.java:594)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:90)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:166)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:180)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+>>>>>>> 5f4712a003b5b828bfdc6080f0fa3cbc366286d0
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
@@ -1105,6 +1454,7 @@ java.lang.NoSuchMethodError: am.gitc.trello.demo.entity.CardEntity.setId(S)V
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<<<<<<< HEAD
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
@@ -1177,6 +1527,77 @@ java.lang.NoSuchMethodError: am.gitc.trello.demo.entity.CardEntity.setId(S)V
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+=======
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-21 21:08:33.937 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 4624 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-21 21:08:33.961 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-21 21:08:38.916 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-21 21:08:39.199 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 254ms. Found 2 repository interfaces.
+2019-07-21 21:08:40.281 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$60c2c574] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-21 21:08:40.941 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-21 21:08:40.977 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-21 21:08:41.000 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-21 21:08:41.001 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-21 21:08:41.343 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-21 21:08:41.345 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 7148 ms
+2019-07-21 21:08:41.816 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-21 21:08:42.998 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-21 21:08:43.152 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-21 21:08:43.426 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-21 21:08:43.429 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-21 21:08:43.751 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-21 21:08:44.172 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-21 21:08:45.966 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:08:47.547 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-21 21:08:48.212 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2ec0ca83, org.springframework.security.web.context.SecurityContextPersistenceFilter@2beee3e8, org.springframework.security.web.header.HeaderWriterFilter@4ec0229c, org.springframework.security.web.csrf.CsrfFilter@1dbeedff, org.springframework.security.web.authentication.logout.LogoutFilter@b34c7c9, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3514ac7d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58bad46f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@f3876ef, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3350ab4, org.springframework.security.web.session.SessionManagementFilter@35b3c1f6, org.springframework.security.web.access.ExceptionTranslationFilter@2493eec6, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@2e426dd2]
+2019-07-21 21:08:48.279 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-21 21:08:48.732 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-21 21:08:49.051 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-21 21:08:53.339 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-07-21 21:08:53.378 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-07-21 21:08:53.461 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-07-21 21:08:53.860 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-21 21:08:53.917 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-21 21:08:53.922 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 22.562 seconds (JVM running for 25.519)
+2019-07-21 21:08:59.766 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-21 21:08:59.767 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-21 21:08:59.787 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 20 ms
+2019-07-21 21:09:00.085 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563728939953,"response_time_after":1563728940033,"response_time":1563728940010,"response_duration":57,"request_uri":"/error","response_time_after_duration":80}
+2019-07-21 21:09:14.083 ERROR o.a.c.c.C.[.[.[.[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalArgumentException: There is no PasswordEncoder mapped for the id "null"
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder$UnmappedIdPasswordEncoder.matches(DelegatingPasswordEncoder.java:244)
+	at org.springframework.security.crypto.password.DelegatingPasswordEncoder.matches(DelegatingPasswordEncoder.java:198)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$LazyPasswordEncoder.matches(WebSecurityConfigurerAdapter.java:594)
+	at org.springframework.security.authentication.dao.DaoAuthenticationProvider.additionalAuthenticationChecks(DaoAuthenticationProvider.java:90)
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:166)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:175)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:200)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:180)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+>>>>>>> 5f4712a003b5b828bfdc6080f0fa3cbc366286d0
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
 	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
 	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
@@ -1207,6 +1628,7 @@ java.lang.NoSuchMethodError: am.gitc.trello.demo.entity.CardEntity.setId(S)V
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853)
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587)
 	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+<<<<<<< HEAD
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
@@ -1256,3 +1678,259 @@ java.lang.NoSuchMethodError: am.gitc.trello.demo.entity.CardEntity.setId(S)V
 2019-07-21 17:13:08.970 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563714788599,"response_time_after":1563714788970,"response_time":1563714788966,"response_duration":367,"request_uri":"/api/cards","response_time_after_duration":371}
 2019-07-21 17:13:28.910 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563714808762,"response_time_after":1563714808910,"response_time":1563714808910,"response_duration":148,"request_uri":"/api/cards","response_time_after_duration":148}
 2019-07-21 17:13:45.767 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563714825502,"response_time_after":1563714825767,"response_time":1563714825767,"response_duration":265,"request_uri":"/api/cards/1","response_time_after_duration":265}
+=======
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+2019-07-21 21:09:27.152 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563728967141,"response_time_after":1563728967151,"response_time":1563728967149,"response_duration":8,"request_uri":"/error","response_time_after_duration":10}
+2019-07-21 21:09:52.912 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563728992903,"response_time_after":1563728992911,"response_time":1563728992909,"response_duration":6,"request_uri":"/error","response_time_after_duration":8}
+2019-07-21 21:27:02.689 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 5372 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-21 21:27:02.698 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-21 21:27:05.681 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-21 21:27:05.969 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 269ms. Found 2 repository interfaces.
+2019-07-21 21:27:07.000 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2208748f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-21 21:27:07.678 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-21 21:27:07.711 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-21 21:27:07.733 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-21 21:27:07.733 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-21 21:27:08.053 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-21 21:27:08.053 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5165 ms
+2019-07-21 21:27:08.520 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-21 21:27:09.724 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-21 21:27:09.859 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-21 21:27:10.164 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-21 21:27:10.167 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-21 21:27:10.550 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-21 21:27:10.943 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-21 21:27:12.667 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:27:12.689 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [C:\Users\Hrach\IdeaProjects\trello-demo\target\classes\am\gitc\trello\demo\config\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.password.PasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-07-21 21:27:12.690 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:27:12.699 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-21 21:27:12.720 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-21 21:27:12.725 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-21 21:27:12.762 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-21 21:27:13.575 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in am.gitc.trello.demo.config.SecurityConfig required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
+
+2019-07-21 21:30:27.939 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 5332 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-21 21:30:27.991 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-21 21:30:32.404 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-21 21:30:32.621 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 197ms. Found 2 repository interfaces.
+2019-07-21 21:30:33.625 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$c61dcd38] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-21 21:30:34.283 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-21 21:30:34.317 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-21 21:30:34.338 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-21 21:30:34.338 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-21 21:30:34.678 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-21 21:30:34.678 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 6418 ms
+2019-07-21 21:30:35.080 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-21 21:30:36.200 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-21 21:30:36.403 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-21 21:30:36.663 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-21 21:30:36.668 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-21 21:30:37.022 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-21 21:30:37.378 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-21 21:30:39.014 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:30:39.037 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [C:\Users\Hrach\IdeaProjects\trello-demo\target\classes\am\gitc\trello\demo\config\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.password.PasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-07-21 21:30:39.038 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:30:39.046 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-21 21:30:39.066 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-21 21:30:39.070 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-21 21:30:39.098 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-21 21:30:39.470 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in am.gitc.trello.demo.config.SecurityConfig required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
+
+2019-07-21 21:33:30.068 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 5444 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-21 21:33:30.085 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-21 21:33:33.658 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-21 21:33:33.891 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 214ms. Found 2 repository interfaces.
+2019-07-21 21:33:34.943 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b0100269] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-21 21:33:35.576 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-21 21:33:35.621 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-21 21:33:35.654 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-21 21:33:35.655 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-21 21:33:36.076 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-21 21:33:36.076 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5833 ms
+2019-07-21 21:33:36.471 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-21 21:33:37.642 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-21 21:33:37.769 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-21 21:33:37.979 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-21 21:33:37.984 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-21 21:33:38.363 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-21 21:33:38.709 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-21 21:33:40.448 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:33:40.470 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [C:\Users\Hrach\IdeaProjects\trello-demo\target\classes\am\gitc\trello\demo\config\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.password.PasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-07-21 21:33:40.471 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:33:40.479 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-21 21:33:40.501 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-21 21:33:40.506 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-21 21:33:40.533 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-21 21:33:40.980 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in am.gitc.trello.demo.config.SecurityConfig required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
+
+2019-07-21 21:34:59.105 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 4860 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-21 21:34:59.113 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-21 21:35:02.258 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-21 21:35:02.555 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 277ms. Found 2 repository interfaces.
+2019-07-21 21:35:03.475 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$17db815f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-21 21:35:04.700 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-21 21:35:04.749 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-21 21:35:04.770 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-21 21:35:04.771 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-21 21:35:05.273 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-21 21:35:05.274 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 5982 ms
+2019-07-21 21:35:05.810 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-21 21:35:07.283 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-21 21:35:07.611 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-21 21:35:08.247 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-21 21:35:08.262 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-21 21:35:09.198 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-21 21:35:09.873 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-21 21:35:12.193 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:35:12.216 WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [C:\Users\Hrach\IdeaProjects\trello-demo\target\classes\am\gitc\trello\demo\config\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 0; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'org.springframework.security.crypto.password.PasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2019-07-21 21:35:12.217 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:35:12.225 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-07-21 21:35:12.247 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2019-07-21 21:35:12.252 INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2019-07-21 21:35:12.319 INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2019-07-21 21:35:12.638 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in am.gitc.trello.demo.config.SecurityConfig required a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.password.PasswordEncoder' in your configuration.
+
+2019-07-21 21:37:30.124 INFO  a.g.t.demo.TrelloDemoApplication - Starting TrelloDemoApplication on Hrach-ПК with PID 5364 (C:\Users\Hrach\IdeaProjects\trello-demo\target\classes started by Hrach in C:\Users\Hrach\IdeaProjects\trello-demo)
+2019-07-21 21:37:30.132 INFO  a.g.t.demo.TrelloDemoApplication - No active profile set, falling back to default profiles: default
+2019-07-21 21:37:36.135 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-07-21 21:37:36.521 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 362ms. Found 2 repository interfaces.
+2019-07-21 21:37:37.920 INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$448f7e4d] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-07-21 21:37:38.663 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+2019-07-21 21:37:38.702 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2019-07-21 21:37:38.729 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-07-21 21:37:38.730 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.21]
+2019-07-21 21:37:39.265 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2019-07-21 21:37:39.266 INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 8384 ms
+2019-07-21 21:37:39.811 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-07-21 21:37:41.160 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-07-21 21:37:41.321 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-07-21 21:37:41.661 INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.3.10.Final}
+2019-07-21 21:37:41.665 INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2019-07-21 21:37:42.052 INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-07-21 21:37:42.461 INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2019-07-21 21:37:44.424 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2019-07-21 21:37:47.228 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration$JpaWebMvcConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2019-07-21 21:37:48.820 INFO  o.s.s.web.DefaultSecurityFilterChain - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75b363c3, org.springframework.security.web.context.SecurityContextPersistenceFilter@16b7e04a, org.springframework.security.web.header.HeaderWriterFilter@2bcb1414, org.springframework.security.web.csrf.CsrfFilter@61c5fd78, org.springframework.security.web.authentication.logout.LogoutFilter@3fd5d679, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3eee08f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cf2f5d6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40017e98, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6ea3a513, org.springframework.security.web.session.SessionManagementFilter@3ec082a1, org.springframework.security.web.access.ExceptionTranslationFilter@12166229, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3add5e17]
+2019-07-21 21:37:48.918 INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-07-21 21:37:49.913 INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-07-21 21:37:50.278 WARN  o.s.b.a.t.ThymeleafAutoConfiguration$DefaultTemplateResolverConfiguration - Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2019-07-21 21:37:56.847 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-07-21 21:37:56.981 INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-07-21 21:37:57.133 INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-07-21 21:37:57.943 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2019-07-21 21:37:58.084 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+2019-07-21 21:37:58.089 INFO  a.g.t.demo.TrelloDemoApplication - Started TrelloDemoApplication in 30.61 seconds (JVM running for 37.981)
+2019-07-21 21:38:11.906 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-07-21 21:38:11.907 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-07-21 21:38:12.017 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 109 ms
+2019-07-21 21:38:12.577 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730692377,"response_time_after":1563730692503,"response_time":1563730692473,"response_duration":96,"request_uri":"/error","response_time_after_duration":126}
+2019-07-21 21:38:12.577 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730692376,"response_time_after":1563730692502,"response_time":1563730692473,"response_duration":97,"request_uri":"/error","response_time_after_duration":126}
+2019-07-21 21:38:25.619 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730705583,"response_time_after":1563730705619,"response_time":1563730705610,"response_duration":27,"request_uri":"/","response_time_after_duration":36}
+2019-07-21 21:38:25.994 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730705992,"response_time_after":1563730705994,"response_time":1563730705994,"response_duration":2,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":2}
+2019-07-21 21:38:26.014 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730706001,"response_time_after":1563730706014,"response_time":1563730706013,"response_duration":12,"request_uri":"/error","response_time_after_duration":13}
+2019-07-21 21:38:28.087 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730707728,"response_time_after":1563730708086,"response_time":1563730708086,"response_duration":358,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":358}
+2019-07-21 21:38:28.148 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730708112,"response_time_after":1563730708148,"response_time":1563730708148,"response_duration":36,"request_uri":"/swagger-resources","response_time_after_duration":36}
+2019-07-21 21:38:29.359 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730709333,"response_time_after":1563730709359,"response_time":1563730709357,"response_duration":24,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":26}
+2019-07-21 21:39:32.608 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730772606,"response_time_after":1563730772608,"response_time":1563730772606,"response_duration":0,"request_uri":"/","response_time_after_duration":2}
+2019-07-21 21:39:33.505 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730773503,"response_time_after":1563730773505,"response_time":1563730773504,"response_duration":1,"request_uri":"/","response_time_after_duration":2}
+2019-07-21 21:39:33.583 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730773582,"response_time_after":1563730773583,"response_time":1563730773583,"response_duration":1,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":1}
+2019-07-21 21:39:33.605 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730773587,"response_time_after":1563730773605,"response_time":1563730773604,"response_duration":17,"request_uri":"/error","response_time_after_duration":18}
+2019-07-21 21:39:34.191 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730774187,"response_time_after":1563730774190,"response_time":1563730774190,"response_duration":3,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":3}
+2019-07-21 21:39:34.287 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730774280,"response_time_after":1563730774285,"response_time":1563730774285,"response_duration":5,"request_uri":"/swagger-resources","response_time_after_duration":5}
+2019-07-21 21:39:34.657 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730774650,"response_time_after":1563730774657,"response_time":1563730774656,"response_duration":6,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":7}
+2019-07-21 21:39:39.035 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730779028,"response_time_after":1563730779035,"response_time":1563730779029,"response_duration":1,"request_uri":"/","response_time_after_duration":7}
+2019-07-21 21:39:39.751 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730779750,"response_time_after":1563730779751,"response_time":1563730779750,"response_duration":0,"request_uri":"/","response_time_after_duration":1}
+2019-07-21 21:39:39.844 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730779842,"response_time_after":1563730779844,"response_time":1563730779844,"response_duration":2,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":2}
+2019-07-21 21:39:39.862 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730779854,"response_time_after":1563730779862,"response_time":1563730779862,"response_duration":8,"request_uri":"/error","response_time_after_duration":8}
+2019-07-21 21:39:40.086 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730780078,"response_time_after":1563730780086,"response_time":1563730780085,"response_duration":7,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":8}
+2019-07-21 21:39:40.308 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730780305,"response_time_after":1563730780308,"response_time":1563730780308,"response_duration":3,"request_uri":"/swagger-resources","response_time_after_duration":3}
+2019-07-21 21:39:40.566 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730780562,"response_time_after":1563730780566,"response_time":1563730780565,"response_duration":3,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":4}
+2019-07-21 21:39:43.831 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730783827,"response_time_after":1563730783830,"response_time":1563730783830,"response_duration":3,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":3}
+2019-07-21 21:39:43.846 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730783838,"response_time_after":1563730783846,"response_time":1563730783846,"response_duration":8,"request_uri":"/error","response_time_after_duration":8}
+2019-07-21 21:39:44.066 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730784060,"response_time_after":1563730784064,"response_time":1563730784064,"response_duration":4,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":4}
+2019-07-21 21:39:44.111 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730784106,"response_time_after":1563730784110,"response_time":1563730784110,"response_duration":4,"request_uri":"/swagger-resources","response_time_after_duration":4}
+2019-07-21 21:39:44.345 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730784340,"response_time_after":1563730784345,"response_time":1563730784345,"response_duration":5,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":5}
+2019-07-21 21:39:44.923 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730784921,"response_time_after":1563730784923,"response_time":1563730784923,"response_duration":2,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":2}
+2019-07-21 21:39:44.932 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730784928,"response_time_after":1563730784931,"response_time":1563730784931,"response_duration":3,"request_uri":"/error","response_time_after_duration":3}
+2019-07-21 21:39:45.198 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730785193,"response_time_after":1563730785197,"response_time":1563730785197,"response_duration":4,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":4}
+2019-07-21 21:39:45.232 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730785228,"response_time_after":1563730785232,"response_time":1563730785232,"response_duration":4,"request_uri":"/swagger-resources","response_time_after_duration":4}
+2019-07-21 21:39:45.458 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730785449,"response_time_after":1563730785457,"response_time":1563730785456,"response_duration":7,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":8}
+2019-07-21 21:39:51.720 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730791716,"response_time_after":1563730791719,"response_time":1563730791718,"response_duration":2,"request_uri":"/webjars/springfox-swagger-ui/css/typography.css","response_time_after_duration":3}
+2019-07-21 21:39:51.731 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730791726,"response_time_after":1563730791731,"response_time":1563730791731,"response_duration":5,"request_uri":"/error","response_time_after_duration":5}
+2019-07-21 21:39:52.243 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730792238,"response_time_after":1563730792243,"response_time":1563730792243,"response_duration":5,"request_uri":"/swagger-resources/configuration/ui","response_time_after_duration":5}
+2019-07-21 21:39:52.314 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730792311,"response_time_after":1563730792314,"response_time":1563730792313,"response_duration":2,"request_uri":"/swagger-resources","response_time_after_duration":3}
+2019-07-21 21:39:52.603 INFO  a.g.t.d.interceptor.LogInterceptor - {"request_time":1563730792599,"response_time_after":1563730792603,"response_time":1563730792602,"response_duration":3,"request_uri":"/swagger-resources/configuration/security","response_time_after_duration":4}
+>>>>>>> 5f4712a003b5b828bfdc6080f0fa3cbc366286d0

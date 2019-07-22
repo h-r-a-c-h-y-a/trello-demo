@@ -27,6 +27,7 @@ public class LogInterceptor extends HandlerInterceptorAdapter {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
         Map<String, Object> logs = (Map<String, Object>) request.getAttribute("LOG");
         long respTime = System.currentTimeMillis();
@@ -35,6 +36,7 @@ public class LogInterceptor extends HandlerInterceptorAdapter {
     }
 
     @Override
+    @SuppressWarnings("unchecked")
     public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
         Map<String, Object> logs = (Map<String, Object>) request.getAttribute("LOG");
         long respTime = System.currentTimeMillis();
