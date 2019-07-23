@@ -1,5 +1,6 @@
 package am.gitc.trello.demo.service.impl;
 
+import am.gitc.trello.demo.entity.CardEntity;
 import am.gitc.trello.demo.repository.CardRepository;
 import am.gitc.trello.demo.service.CardService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +13,27 @@ import org.springframework.stereotype.Component;
 @Component
 public class CardServiceImpl implements CardService{
 
-
     private CardRepository cardRepository;
 
     @Autowired
     public CardServiceImpl(CardRepository cardRepository){
         this.cardRepository = cardRepository;
+    }
+
+    @Override
+    public CardEntity createCard(CardEntity cardEntity) {
+        return this.cardRepository.save(cardEntity);
+    }
+
+    @Override
+    public void deleteCard(short id) {
+        this.cardRepository.deleteById(id);
+    }
+
+    @Override
+    public CardEntity updateCard(CardEntity cardEntity) {
+
+        return this.cardRepository.save(cardEntity);
     }
 
 

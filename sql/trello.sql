@@ -10,7 +10,8 @@ CREATE TABLE users
     user_name VARCHAR(255) NOT NULL,
     initial   CHAR(3),
     image_url VARCHAR(255) DEFAULT 'images/user.png',
-    about_me  VARCHAR(255)
+    about_me  VARCHAR(255),
+    activation_code varchar(255)
 );
 
 CREATE TABLE roles
