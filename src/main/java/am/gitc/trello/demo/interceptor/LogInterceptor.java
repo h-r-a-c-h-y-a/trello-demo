@@ -1,6 +1,7 @@
 package am.gitc.trello.demo.interceptor;
 
 import am.gitc.trello.demo.util.JsonUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -12,10 +13,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
 import java.util.Map;
 
+@Slf4j
 @Component
 public class LogInterceptor extends HandlerInterceptorAdapter {
-
-    private static final Logger LOGGER = LoggerFactory.getLogger(LogInterceptor.class);
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -43,6 +43,6 @@ public class LogInterceptor extends HandlerInterceptorAdapter {
         long respTime = System.currentTimeMillis();
         logs.put("response_time_after", respTime);
         logs.put("response_time_after_duration", respTime - (Long) logs.get("request_time"));
-        LOGGER.info(JsonUtil.serialize(logs));
+        log.info(JsonUtil.serialize(logs));
     }
 }

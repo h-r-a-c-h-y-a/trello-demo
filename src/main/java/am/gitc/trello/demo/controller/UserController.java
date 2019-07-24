@@ -58,7 +58,7 @@ public class UserController {
     @PostMapping("/trello/users/register")
     public ModelAndView registration(ModelAndView modelAndView,
                                      @ModelAttribute("userForm") @Valid UserEntity userEntity,
-                                     @RequestParam("file") MultipartFile file) {
+                                     @RequestParam("file") MultipartFile file, HttpServletRequest request) {
         userEntity.setInitial();
         if (!this.userService.isExist(userEntity.getEmail())) {
             userEntity.setActivationCode(UUID.randomUUID().toString());

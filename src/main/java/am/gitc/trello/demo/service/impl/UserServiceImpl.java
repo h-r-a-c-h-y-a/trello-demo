@@ -10,7 +10,9 @@ import org.springframework.web.multipart.MultipartFile;
 
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStream;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,16 +34,15 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void register(UserEntity user, MultipartFile file) throws IOException {
-        String filePath = "images";
-        if ("".equals(file.getOriginalFilename())) {
-            user.setImageUrl(filePath + file.getOriginalFilename());
-        } else {
-            user.setImageUrl(filePath + user.getId());
-        }
+        String filePath = UserServiceImpl.class.getResource("/images").getPath() + "/" + user.getEmail();
+        user.setImageUrl(filePath);
         this.userRepository.save(user);
         this.redis.deleteAll("allUsers");
         this.redis.add("" + user.getId(), user, 80000);
-        file.transferTo(new File(filePath + ("".equals(file.getOriginalFilename()) ? user.getId() : file.getOriginalFilename())));
+        byte [] content = file.getBytes();
+        try(OutputStream out = new FileOutputStream(filePath)) {
+           out.write(content);
+        }
     }
 
     @Override
