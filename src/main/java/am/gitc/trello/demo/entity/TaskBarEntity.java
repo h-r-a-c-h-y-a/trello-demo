@@ -16,7 +16,6 @@ public class TaskBarEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private byte id;
 
-    @NotNull
     @NotBlank
     @Size(max = 60)
     private String title;

@@ -16,7 +16,6 @@ public class CardEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private short id;
 
-    @NotNull
     @NotBlank
     @Size(max = 100)
     private String title;

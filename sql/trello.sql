@@ -51,3 +51,10 @@ CREATE TABLE task_bar_cards
     CONSTRAINT task_bar_id FOREIGN KEY (task_bar_id) REFERENCES task_bar (id),
     CONSTRAINT card_id FOREIGN KEY (card_id) REFERENCES cards (id)
 );
+
+CREATE TABLE boards(
+    id TINYINT PRIMARY KEY AUTO_INCREMENT,
+    title VARCHAR(255)NOT NULL ,
+    visibility ENUM('PUBLIC', 'PRIVATE') NOT NULL,
+    background_image_url VARCHAR(255)
+);

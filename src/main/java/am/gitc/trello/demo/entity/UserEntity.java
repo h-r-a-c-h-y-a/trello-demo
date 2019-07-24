@@ -18,18 +18,16 @@ public class UserEntity {
     @Email(message = "Please provide a valid email address")
     private String email;
 
-    @NotNull(message = "please provide password with length minimum 8 character")
     @NotBlank(message = "please provide password with length minimum 8 character")
     @Size(min = 8, message = "please provide password with length minimum 8 character")
     private String password;
 
-    @NotNull(message = "please provide your first and last name")
+
     @NotBlank(message = "please provide your first and last name")
     @Size(min = 5, message = "")
     @Column(name = "full_name")
     private String fullName;
 
-    @NotNull
     @NotBlank
     @Column(name = "user_name")
     private String userName;
