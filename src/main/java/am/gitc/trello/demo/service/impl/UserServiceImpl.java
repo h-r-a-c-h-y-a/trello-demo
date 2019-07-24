@@ -3,13 +3,12 @@ package am.gitc.trello.demo.service.impl;
 import am.gitc.trello.demo.entity.UserEntity;
 import am.gitc.trello.demo.repository.UserRepository;
 import am.gitc.trello.demo.service.UserService;
-import am.gitc.trello.demo.service.redis.RedisImpl;
+import am.gitc.trello.demo.service.redis.impl.RedisImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 
-import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -35,7 +34,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public void register(UserEntity user, MultipartFile file) throws IOException {
         String filePath = UserServiceImpl.class.getResource("/images").getPath() + "/" + user.getEmail();
-        user.setImageUrl(filePath);
+        user.setImageUrl("/images/" + user.getEmail());
         this.userRepository.save(user);
         this.redis.deleteAll("allUsers");
         this.redis.add("" + user.getId(), user, 80000);

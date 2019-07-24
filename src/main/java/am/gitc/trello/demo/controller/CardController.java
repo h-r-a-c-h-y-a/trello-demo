@@ -2,16 +2,23 @@ package am.gitc.trello.demo.controller;
 
 import am.gitc.trello.demo.dto.CardDto;
 import am.gitc.trello.demo.entity.CardEntity;
+import am.gitc.trello.demo.exception.FileLoadException;
 import am.gitc.trello.demo.mapper.CardMapper;
 import am.gitc.trello.demo.service.CardService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
+
+import java.io.IOException;
 
 /**
  * Created by User on 20.07.2019.
  */
 
+@Slf4j
 @RestController
 public class CardController {
 
@@ -31,8 +38,8 @@ public class CardController {
         return ResponseEntity.ok(this.cardMapper.toDto(cardEntity));
     }
 
-    @PutMapping("/trello/cards")
-    public ResponseEntity<CardDto> updateCard(@RequestParam Short id, @RequestBody CardDto cardDto){
+    @PutMapping("/trello/cards/{id}")
+    public ResponseEntity<CardDto> updateCard(@PathVariable("id") Short id, @RequestBody CardDto cardDto) {
         CardEntity cardEntity = this.cardMapper.toEntity(cardDto);
         cardEntity.setId(id);
         cardEntity = this.cardService.updateCard(cardEntity);
@@ -40,12 +47,25 @@ public class CardController {
     }
 
     @DeleteMapping("/trello/cards/{id}")
-    public ResponseEntity deleteCard(@PathVariable Short id){
+    public ResponseEntity deleteCard(@PathVariable Short id) {
         this.cardService.deleteCard(id);
         return ResponseEntity.ok().build();
     }
 
-
+    @PostMapping("/trello/cards/{id}/_upload_file")
+    public ModelAndView attachFile(@PathVariable("id") Short id,
+                                   @RequestParam("file") MultipartFile file,
+                                   ModelAndView modelAndView) {
+        try {
+           CardEntity entity = this.cardService.attachFile(id, file);
+            modelAndView.setViewName("home");
+            modelAndView.addObject("card", entity);
+            return modelAndView;
+        } catch (IOException e) {
+           log.error("ERROR", e.getMessage());
+           throw new FileLoadException(e);
+        }
+    }
 }
 
 

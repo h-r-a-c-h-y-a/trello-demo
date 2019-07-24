@@ -1,6 +1,7 @@
-package am.gitc.trello.demo.service.redis;
+package am.gitc.trello.demo.service.redis.impl;
 
 import am.gitc.trello.demo.exception.RedisException;
+import am.gitc.trello.demo.service.redis.Redis;
 import am.gitc.trello.demo.util.JsonUtil;
 import am.gitc.trello.demo.util.Validator;
 import com.fasterxml.jackson.core.type.TypeReference;

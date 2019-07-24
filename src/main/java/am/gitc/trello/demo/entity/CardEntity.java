@@ -22,6 +22,9 @@ public class CardEntity {
 
     private String description;
 
+    @Column(name = "file_url")
+    private String fileUrl;
+
     private String comment;
 
     @Size(max = 100)
