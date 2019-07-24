@@ -4,21 +4,18 @@
     <title>Spring Security Example </title>
 </head>
 <body>
-<div th:if="${param.error}">
-    Invalid username and password.
-</div>
-<div th:if="${param.logout}">
-    You have been logged out.
-</div>
-<form th:action="@{/trello/users/login}" th:object="${user}" method="post" enctype="multipart/form-data">
+<h3 th:utext="${CodeMessage}"></h3>
+<form action="/trello/users/register" th:object="${userForm}" method="POST" enctype="multipart/form-data">
     <div><label> Full Name : <input type="text" name="fullname"th:field="*{fullName}" /> </label></div>
     <div><label> User Name: <input type="text" name="username" th:field="*{userName}"/> </label></div>
     <div><label> Email : <input type="email" name="email" th:field="*{email}"/> </label></div>
     <div><label> Password: <input type="password" name="password" th:field="*{password}"/> </label></div>
     <div><label> About Me : <textarea name="aboutme" th:field="*{aboutMe}"></textarea > </label></div>
     <div><label for="file">Choose file to upload</label>
-        <input type="file" id="file" name="file" multiple th:field="*{imageUrl}"/></div>
+        <input type="file" id="file" name="file" accept="image/*"/></div>
     <div><input type="submit" value="Sign In"/></div>
 </form>
+<div style="color: red" th:utext="${RegisterFailed}"></div>
+<span style="color: red" th:utext="${ActivationFailed}"></span>
 </body>
 </html>

@@ -45,8 +45,12 @@ public class UserEntity {
     @Column(name = "activation_code")
     private String activationCode;
 
-    @ElementCollection(fetch = FetchType.EAGER)
-    @CollectionTable(name = "users_roles",
-            joinColumns = @JoinColumn(name = "user_id"))
-    private Set<RoleEnitiy> roles;
+//    @ElementCollection(fetch = FetchType.EAGER)
+//    @CollectionTable(name = "users_roles",
+//            joinColumns = @JoinColumn(name = "user_id"))
+//    private Set<RoleEnitiy> roles;
+
+    public void setInitial() {
+        this.initial = "" + this.fullName.split(" ")[0].toUpperCase().charAt(0) + "" + this.fullName.split(" ")[1].toUpperCase().charAt(0);
+    }
 }

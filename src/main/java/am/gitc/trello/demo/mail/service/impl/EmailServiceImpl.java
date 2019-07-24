@@ -131,7 +131,7 @@ public class EmailServiceImpl implements EmailService {
     @Override
     public void validateEmail(UserEntity entity) throws MessagingException {
         String text = String.format("<h1 style = \"background-color:rgb(183, 255, 255); color:black\" >Hello %s!! " +
-                "For activation your account <a href='http://localhost:8080/activate/%s' style = \"background-color:rgb(157, 243, 217); color:rgb(16, 12, 122)\"><i>please click here</i></a> " +
+                "For activation your account <a href='http://localhost:8080/trello/users/activate/%s' style = \"background-color:rgb(157, 243, 217); color:rgb(16, 12, 122)\"><i>please click here</i></a> " +
                 "</br> Enjoy using the product!</h1>", entity.getFullName(), entity.getActivationCode());
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message, "UTF-8");

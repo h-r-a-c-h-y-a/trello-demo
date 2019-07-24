@@ -1,10 +1,15 @@
 package am.gitc.trello.demo.service.impl;
 
+import am.gitc.trello.demo.TrelloDemoApplication;
 import am.gitc.trello.demo.entity.UserEntity;
 import am.gitc.trello.demo.repository.UserRepository;
 import am.gitc.trello.demo.service.UserService;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,8 +27,15 @@ public class UserServiceImpl implements UserService {
 
 
     @Override
-    public void register(UserEntity user) {
+    public void register(UserEntity user, MultipartFile file) throws IOException {
+        String filePath = "images";
+        if ("".equals(file.getOriginalFilename())) {
+            user.setImageUrl(filePath + file.getOriginalFilename());
+        }else {
+            user.setImageUrl(filePath + user.getId());
+        }
         this.userRepository.save(user);
+        file.transferTo(new File(filePath + ("".equals(file.getOriginalFilename()) ? user.getId() : file.getOriginalFilename())));
     }
 
     @Override

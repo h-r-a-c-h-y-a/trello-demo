@@ -1,6 +1,5 @@
 package am.gitc.trello.demo.controller;
 
-import am.gitc.trello.demo.dto.UserDto;
 import am.gitc.trello.demo.entity.UserEntity;
 import am.gitc.trello.demo.mail.service.EmailService;
 import am.gitc.trello.demo.mapper.UserMapper;
@@ -11,17 +10,18 @@ import lombok.EqualsAndHashCode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.mail.MessagingException;
-import javax.persistence.Entity;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 import javax.validation.constraints.Email;
-import javax.websocket.server.PathParam;
-import java.util.List;
+import java.io.IOException;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -42,25 +42,31 @@ public class UserController {
 
 
     @GetMapping({"/", "/trello/users/login"})
-    public ModelAndView goTologinPage(ModelAndView model){
-        model.addObject("user", new UserEntity());
+    public ModelAndView goTologinPage(ModelAndView model) {
+        model.addObject("userForm", new UserEntity());
         model.setViewName("login");
         return model;
     }
 
     @GetMapping("/trello/users/register")
-    public ModelAndView goToRegPage(ModelAndView model){
-        model.addObject("user", new UserEntity());
+    public ModelAndView goToRegPage(ModelAndView model) {
+        model.addObject("userForm", new UserEntity());
         model.setViewName("register");
         return model;
     }
 
     @PostMapping("/trello/users/register")
-    public ModelAndView registration(ModelAndView modelAndView, @ModelAttribute("userForm") UserEntity userEntity) {
-        userEntity.setInitial(userEntity.getFullName());
+    public ModelAndView registration(ModelAndView modelAndView,
+                                     @ModelAttribute("userForm") @Valid UserEntity userEntity,
+                                     @RequestParam("file") MultipartFile file) {
+        userEntity.setInitial();
         if (!this.userService.isExist(userEntity.getEmail())) {
             userEntity.setActivationCode(UUID.randomUUID().toString());
-            this.userService.register(userEntity);
+            try {
+                this.userService.register(userEntity, file);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             try {
                 this.emailService.validateEmail(userEntity);
             } catch (MessagingException e) {
@@ -78,16 +84,22 @@ public class UserController {
 
 
     @GetMapping("/trello/users/activate/{activation_code}")
-    public ModelAndView activateAccount(ModelAndView modelAndView,
-                                        @PathVariable("activation_code") String activationCode) {
-        boolean active = this.userService.hasActiveCode(activationCode);
-        if (!active) {
-            modelAndView.setViewName("register");
-            modelAndView.addObject("ActivationFailed", "Activation code not found");
+    public void activateAccount(ModelAndView modelAndView,
+                                @PathVariable("activation_code") String activationCode,
+                                HttpServletRequest req,
+                                HttpServletResponse resp) {
+        try {
+            boolean active = this.userService.hasActiveCode(activationCode);
+            if (!active) {
+                modelAndView.addObject("ActivationFailed", "Activation code not found");
+                req.getRequestDispatcher("/trello/users/register").forward(req, resp);
+                return;
+            }
+            modelAndView.addObject("RegisterSuccess", "Successfully registered!");
+            req.getRequestDispatcher("/trello/users/login").forward(req, resp);
+        }   catch (IOException | ServletException e) {
+            e.printStackTrace();
         }
-        modelAndView.setViewName("login");
-        modelAndView.addObject("RegisterSuccess", "Successfully registered!");
-        return modelAndView;
     }
 
 
@@ -100,7 +112,7 @@ public class UserController {
             modelAndView.addObject("NotFound", "Users with id = " + userId + "not found.");
             return modelAndView;
         }
-        modelAndView.addObject("user", this.userMapper.toDto(userEntity.get()));
+        modelAndView.addObject("user", userEntity.get());
         return modelAndView;
     }
 
@@ -108,7 +120,7 @@ public class UserController {
     @GetMapping("/trello/users")
     public ModelAndView getAllUsers(ModelAndView modelAndView) {
         logger.info("Fetching all users.");
-        modelAndView.addObject("users", this.userMapper.toDtoList(this.userService.getAll()));
+        modelAndView.addObject("users", this.userService.getAll());
         return modelAndView;
     }
 
@@ -119,7 +131,7 @@ public class UserController {
         Optional<UserEntity> entity = userService.login(userEntity.getEmail(), userEntity.getPassword());
         if (entity.isPresent()) {
 
-            modelAndView.addObject("user", entity);
+            modelAndView.addObject("userForm", entity);
             return modelAndView;
         }
         modelAndView.addObject("LoginFailed", "password or email are wrong, please enter again");

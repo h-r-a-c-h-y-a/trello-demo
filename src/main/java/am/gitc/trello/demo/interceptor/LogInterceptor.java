@@ -21,6 +21,7 @@ public class LogInterceptor extends HandlerInterceptorAdapter {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         Map<String, Object> logs = new HashMap<>();
         logs.put("request_time", System.currentTimeMillis());
+        logs.put("request_method", request.getMethod());
         logs.put("request_uri", request.getRequestURI());
         request.setAttribute("LOG", logs);
         return true;
