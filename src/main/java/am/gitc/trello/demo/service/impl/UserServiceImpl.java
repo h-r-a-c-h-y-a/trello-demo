@@ -1,12 +1,13 @@
 package am.gitc.trello.demo.service.impl;
 
-import am.gitc.trello.demo.TrelloDemoApplication;
 import am.gitc.trello.demo.entity.UserEntity;
 import am.gitc.trello.demo.repository.UserRepository;
 import am.gitc.trello.demo.service.UserService;
+import am.gitc.trello.demo.service.redis.RedisImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -20,9 +21,12 @@ import java.util.Optional;
 public class UserServiceImpl implements UserService {
 
     private final UserRepository userRepository;
+    private final RedisImpl<UserEntity> redis;
 
-    public UserServiceImpl(UserRepository userRepository) {
+    @Autowired
+    public UserServiceImpl(UserRepository userRepository, RedisImpl<UserEntity> redis) {
         this.userRepository = userRepository;
+        this.redis = redis;
     }
 
 
@@ -31,10 +35,12 @@ public class UserServiceImpl implements UserService {
         String filePath = "images";
         if ("".equals(file.getOriginalFilename())) {
             user.setImageUrl(filePath + file.getOriginalFilename());
-        }else {
+        } else {
             user.setImageUrl(filePath + user.getId());
         }
         this.userRepository.save(user);
+        this.redis.deleteAll("allUsers");
+        this.redis.add("" + user.getId(), user, 80000);
         file.transferTo(new File(filePath + ("".equals(file.getOriginalFilename()) ? user.getId() : file.getOriginalFilename())));
     }
 
@@ -50,18 +56,31 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void delete(int id) {
+        this.redis.deleteKey("" + id);
         this.userRepository.deleteById(id);
     }
 
     @Override
     public Optional<UserEntity> getUser(int id) {
-        return this.userRepository.findById(id);
+        Optional<UserEntity> entityOptional = this.redis.getKey("" + id);
+        if (!entityOptional.isPresent())
+            entityOptional = this.userRepository.findById(id);
+        if (entityOptional.isPresent()) {
+            this.redis.add("" + id, entityOptional.get(), 80000);
+            return entityOptional;
+        }
+        return Optional.empty();
     }
 
     @Override
     public List<UserEntity> getAll() {
-        return this.userRepository.findAll();
-
+        List<UserEntity> entities = this.redis.getAll("allUsers");
+        if (entities != null) {
+            return entities;
+        }
+        entities = this.userRepository.findAll();
+        this.redis.addAll("allUsers", entities, 80000);
+        return entities;
     }
 
 
