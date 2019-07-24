@@ -23,11 +23,11 @@ public class UserRedis {
         this.jedisPool = jedisPool;
     }
 
-    public void addUser(String key, UserEntity value, int ttlSeconds) {
+    public void addUser(String key, UserEntity value) {
         try (Jedis redis = jedisPool.getResource()) {
             String jsonUserValue = JsonUtil.serialize(value);
             redis.set(key, jsonUserValue);
-            redis.expire(key, ttlSeconds);
+            redis.expire(key, 50000);
         } catch (Exception ex) {
             logger.error("Failed to add user", ex);
         }
@@ -46,10 +46,9 @@ public class UserRedis {
         return Optional.empty();
     }
 
-    public void delete(String key, int ttlSeconds) {
+    public void delete(String key) {
         try (Jedis redis = jedisPool.getResource()) {
             redis.del(key);
-            redis.expire(key, ttlSeconds);
         } catch (Exception ex) {
             logger.error("Failed to delete user", ex);
         }
