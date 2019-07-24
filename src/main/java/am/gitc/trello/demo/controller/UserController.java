@@ -2,7 +2,6 @@ package am.gitc.trello.demo.controller;
 
 import am.gitc.trello.demo.entity.UserEntity;
 import am.gitc.trello.demo.mail.service.EmailService;
-import am.gitc.trello.demo.mapper.UserMapper;
 import am.gitc.trello.demo.service.UserService;
 import am.gitc.trello.demo.validation.annotations.ValidPassword;
 import lombok.Data;
@@ -30,14 +29,15 @@ public class UserController {
 
     private final UserService userService;
     private final EmailService emailService;
-    private final UserMapper userMapper;
     private static Logger logger = LoggerFactory.getLogger(UserController.class);
 
+
+    //changing
     @Autowired
-    public UserController(UserService userService, EmailService emailService, UserMapper userMapper) {
+    public UserController(UserService userService, EmailService emailService) {
         this.userService = userService;
         this.emailService = emailService;
-        this.userMapper = userMapper;
+
     }
 
 
@@ -149,14 +149,4 @@ public class UserController {
         return modelAndView;
     }
 
-    @Data
-    @EqualsAndHashCode
-    private static class UserData {
-
-        @Email(message = "please enter valid email")
-        private String email;
-
-        @ValidPassword
-        private String password;
-    }
 }

@@ -1,9 +1,8 @@
 package am.gitc.trello.demo.controller;
 
-import am.gitc.trello.demo.dto.CardDto;
+
 import am.gitc.trello.demo.entity.CardEntity;
 import am.gitc.trello.demo.exception.FileLoadException;
-import am.gitc.trello.demo.mapper.CardMapper;
 import am.gitc.trello.demo.service.CardService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.IOException;
+import java.util.Optional;
 
 /**
  * Created by User on 20.07.2019.
@@ -23,34 +23,47 @@ import java.io.IOException;
 public class CardController {
 
     private final CardService cardService;
-    private final CardMapper cardMapper;
+
 
     @Autowired
-    public CardController(CardService cardService, CardMapper cardMapper) {
-        this.cardMapper = cardMapper;
+    public CardController(CardService cardService) {
         this.cardService = cardService;
     }
 
+
     @PostMapping("/trello/cards")
-    public ResponseEntity<CardDto> createCard(@RequestBody CardDto cardDto) {
-        CardEntity cardEntity = this.cardMapper.toEntity(cardDto);
-        cardEntity = this.cardService.createCard(cardEntity);
-        return ResponseEntity.ok(this.cardMapper.toDto(cardEntity));
+    public ModelAndView createCard(ModelAndView modelAndWiew, @ModelAttribute CardEntity cardEntity){
+        this.cardService.createCard(cardEntity);
+        modelAndWiew.setViewName("home");
+        modelAndWiew.addObject("card",cardEntity);
+        return modelAndWiew;
     }
 
-    @PutMapping("/trello/cards/{id}")
-    public ResponseEntity<CardDto> updateCard(@PathVariable("id") Short id, @RequestBody CardDto cardDto) {
-        CardEntity cardEntity = this.cardMapper.toEntity(cardDto);
-        cardEntity.setId(id);
-        cardEntity = this.cardService.updateCard(cardEntity);
-        return ResponseEntity.ok(this.cardMapper.toDto(cardEntity));
+
+
+    @PutMapping("trello/cards/{id}")
+    public ModelAndView updateCard(@PathVariable("id") short id,@RequestParam CardEntity cardEntity,
+                                   ModelAndView modelAndView){
+          CardEntity cardEntity1 = this.cardService.updateCard(cardEntity);
+             cardEntity1.setId(id);
+             modelAndView.setViewName("home");
+             modelAndView.addObject("card",cardEntity);
+             return modelAndView;
     }
+
+
 
     @DeleteMapping("/trello/cards/{id}")
-    public ResponseEntity deleteCard(@PathVariable Short id) {
-        this.cardService.deleteCard(id);
-        return ResponseEntity.ok().build();
+    public ModelAndView deleteCardById (ModelAndView modelAndView, short cardId){
+        this.cardService.deleteCard(cardId);
+        modelAndView.addObject("DeleteCard",
+                "Your request has been sucssefuly acept");
+         modelAndView.setViewName("home");
+        return modelAndView;
     }
+
+
+
 
     @PostMapping("/trello/cards/{id}/_upload_file")
     public ModelAndView attachFile(@PathVariable("id") Short id,
