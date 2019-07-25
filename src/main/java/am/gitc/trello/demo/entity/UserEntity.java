@@ -1,5 +1,6 @@
 package am.gitc.trello.demo.entity;
 
+import am.gitc.trello.demo.entity.userModel.Role;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -42,6 +43,9 @@ public class UserEntity {
 
     @Column(name = "activation_code")
     private String activationCode;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
 //    @ElementCollection(fetch = FetchType.EAGER)
 //    @CollectionTable(name = "users_roles",
