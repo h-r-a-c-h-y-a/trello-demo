@@ -32,7 +32,7 @@ public class CardController {
 
 
     @PostMapping("/trello/cards")
-    public ModelAndView createCard(ModelAndView modelAndWiew, @ModelAttribute CardEntity cardEntity){
+    public ModelAndView createCard(ModelAndView modelAndWiew, @ModelAttribute("cardForm") CardEntity cardEntity){
         this.cardService.createCard(cardEntity);
         modelAndWiew.setViewName("home");
         modelAndWiew.addObject("card",cardEntity);
@@ -40,14 +40,16 @@ public class CardController {
     }
 
 
-
+//1
     @PutMapping("trello/cards/{id}")
-    public ModelAndView updateCard(@PathVariable("id") short id,@RequestParam CardEntity cardEntity,
+    public ModelAndView updateCard(@PathVariable("id") short id,@ModelAttribute("cardForm") CardEntity cardEntity,
                                    ModelAndView modelAndView){
-          CardEntity cardEntity1 = this.cardService.updateCard(cardEntity);
-             cardEntity1.setId(id);
+
+        cardEntity.setId(id);
+        cardEntity = this.cardService.updateCard(cardEntity);
              modelAndView.setViewName("home");
              modelAndView.addObject("card",cardEntity);
+             log.info("card width {} id updated",id);
              return modelAndView;
     }
 
@@ -59,6 +61,7 @@ public class CardController {
         modelAndView.addObject("DeleteCard",
                 "Your request has been sucssefuly acept");
          modelAndView.setViewName("home");
+         log.info("card width {} id deleted",cardId);
         return modelAndView;
     }
 
