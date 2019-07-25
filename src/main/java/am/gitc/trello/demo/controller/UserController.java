@@ -2,17 +2,17 @@ package am.gitc.trello.demo.controller;
 
 import am.gitc.trello.demo.entity.UserEntity;
 import am.gitc.trello.demo.mail.service.EmailService;
-import am.gitc.trello.demo.mapper.UserMapper;
 import am.gitc.trello.demo.service.UserService;
 import am.gitc.trello.demo.validation.annotations.ValidPassword;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.Marker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.mail.MessagingException;
@@ -25,19 +25,19 @@ import java.io.IOException;
 import java.util.Optional;
 import java.util.UUID;
 
+
+@Slf4j
 @RestController
 public class UserController {
 
     private final UserService userService;
     private final EmailService emailService;
-    private final UserMapper userMapper;
-    private static Logger logger = LoggerFactory.getLogger(UserController.class);
+
 
     @Autowired
-    public UserController(UserService userService, EmailService emailService, UserMapper userMapper) {
+    public UserController(UserService userService, EmailService emailService) {
         this.userService = userService;
         this.emailService = emailService;
-        this.userMapper = userMapper;
     }
 
 
@@ -75,6 +75,7 @@ public class UserController {
         } else {
             modelAndView.addObject("RegisterFailed", "User with email: " + userEntity.getEmail() + " is already exist");
             modelAndView.setViewName("register");
+            log.warn("RegisterFailed", "User with email: " + userEntity.getEmail() + " is already exist");
             return modelAndView;
         }
         modelAndView.setViewName("register");
@@ -93,11 +94,12 @@ public class UserController {
             if (!active) {
                 modelAndView.addObject("ActivationFailed", "Activation code not found");
                 req.getRequestDispatcher("/trello/users/register").forward(req, resp);
+                log.warn("ActivationFailed", "Activation code not found");
                 return;
             }
             modelAndView.addObject("RegisterSuccess", "Successfully registered!");
             req.getRequestDispatcher("/trello/users/login").forward(req, resp);
-        }   catch (IOException | ServletException e) {
+        } catch (IOException | ServletException e) {
             e.printStackTrace();
         }
     }
@@ -108,7 +110,7 @@ public class UserController {
                                     @PathVariable("userId") Integer userId) {
         Optional<UserEntity> userEntity = this.userService.getUser(userId);
         if (!userEntity.isPresent()) {
-            logger.warn("Users with id = {} not found.", userId);
+            log.warn("Users with id = " + userId + " not found.");
             modelAndView.addObject("NotFound", "Users with id = " + userId + "not found.");
             return modelAndView;
         }
@@ -119,7 +121,7 @@ public class UserController {
 
     @GetMapping("/trello/users")
     public ModelAndView getAllUsers(ModelAndView modelAndView) {
-        logger.info("Fetching all users.");
+        log.info("Fetching all users.");
         modelAndView.addObject("users", this.userService.getAll());
         return modelAndView;
     }
@@ -136,6 +138,7 @@ public class UserController {
         }
         modelAndView.addObject("LoginFailed", "password or email are wrong, please enter again");
         modelAndView.setViewName("login");
+        log.warn("LoginFailed", "password or email are wrong, please enter again");
         return modelAndView;
     }
 
@@ -148,15 +151,5 @@ public class UserController {
         modelAndView.setViewName("login");
         return modelAndView;
     }
-
-    @Data
-    @EqualsAndHashCode
-    private static class UserData {
-
-        @Email(message = "please enter valid email")
-        private String email;
-
-        @ValidPassword
-        private String password;
-    }
 }
+

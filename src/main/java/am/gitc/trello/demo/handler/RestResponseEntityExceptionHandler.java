@@ -1,7 +1,9 @@
 package am.gitc.trello.demo.handler;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import am.gitc.trello.demo.exception.EmailException;
+import am.gitc.trello.demo.exception.FileLoadException;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,10 +17,10 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExcep
 import java.util.*;
 import java.util.stream.Collectors;
 
+@Slf4j
 @ControllerAdvice
 public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(RestResponseEntityExceptionHandler.class);
 
   @Override
   protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
@@ -39,22 +41,24 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
 
   @ExceptionHandler(value = Throwable.class)
   protected ResponseEntity<Object> handleThrowable(Throwable ex) {
-    LOGGER.error("ERROR:", ex);
+    log.error("ERROR:", ex);
     return new ResponseEntity<>("Internal Server Error!", HttpStatus.INTERNAL_SERVER_ERROR);
   }
 
-//  @ExceptionHandler()
-//  protected ResponseEntity<Object> handleConflictException(Throwable ex) {
-//    logger.error("ERROR:", ex);
-//    return new ResponseEntity<>(new HashMap<String, String>(){{
-//      put("error", ex.getMessage());
-//    }}, HttpStatus.CONFLICT);
-//  }
-
-
-  private Object createBody(Throwable obj) {
-    Map<String, Object> body = new HashMap<>();
-    body.put("message", obj.getMessage());
-    return body;
+  @ExceptionHandler(EmailException.class)
+  protected ResponseEntity<Object> handleEmailException(Throwable  ex){
+    logger.error("ERROR:", ex);
+    return new ResponseEntity<>(new HashMap<String, String>(){{
+      put("error", ex.getMessage());
+    }}, HttpStatus.NETWORK_AUTHENTICATION_REQUIRED);
   }
+
+  @ExceptionHandler(FileLoadException.class)
+  protected ResponseEntity<Object> handleFileLoadException(Throwable ex) {
+    logger.error("ERROR:", ex);
+    return new ResponseEntity<>(new HashMap<String, String>(){{
+      put("error", ex.getMessage());
+    }}, HttpStatus.NOT_IMPLEMENTED);
+  }
+
 }
